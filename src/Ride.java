@@ -3,26 +3,37 @@ import java.util.ArrayList;
 public class Ride {
 	
 	/*
-	 * Describes an actual ride
+	 * Describes a planned ride or an actual ride
 	 */
 
 	private String destination;
 	private String source;
 	private int pricePerHitchhiker;
 	private Car theCar;
-	private CarOwner carOwner;
+	private RideDriver carOwner;
 	private ArrayList<Hitchhiker> hitchhikers;
-	private int numOfActualHichhikers;
 	private int moneySavedFromRide;
+	private boolean executed;
 	
-	public Ride(String destination, String source, Car theCar, CarOwner carOwner, ArrayList<Hitchhiker> hitchhikers,
-			int numOfActualHichhikers) {
+	public Ride(String destination, String source, Car theCar, 
+			RideDriver carOwner, ArrayList<Hitchhiker> hitchhikers) {
 		this.destination = destination;
 		this.source = source;
 		this.theCar = theCar;
 		this.carOwner = carOwner;
 		this.hitchhikers = hitchhikers;
-		this.numOfActualHichhikers = numOfActualHichhikers;
+		this.executed = false;
+	}
+	
+	
+	// constructor for a planned drive
+	public Ride(String destination, String source, int pricePerHitchhiker, Car theCar, RideDriver carOwner) {
+		this.destination = destination;
+		this.source = source;
+		this.pricePerHitchhiker = pricePerHitchhiker;
+		this.theCar = theCar;
+		this.carOwner = carOwner;
+		this.executed = false;
 	}
 
 	public String getDestination() {
@@ -49,11 +60,11 @@ public class Ride {
 		this.theCar = theCar;
 	}
 
-	public CarOwner getCarOwner() {
+	public RideDriver getCarOwner() {
 		return carOwner;
 	}
 
-	public void setCarOwner(CarOwner carOwner) {
+	public void setCarOwner(RideDriver carOwner) {
 		this.carOwner = carOwner;
 	}
 
@@ -65,12 +76,8 @@ public class Ride {
 		this.hitchhikers = hitchhikers;
 	}
 
-	public int getNumOfActualHichhikers() {
-		return numOfActualHichhikers;
-	}
-
-	public void setNumOfActualHichhikers(int numOfActualHichhikers) {
-		this.numOfActualHichhikers = numOfActualHichhikers;
+	public int getNumOfHichhikers() {
+		return hitchhikers.size();
 	}
 
 	public int getPricePerHitchhiker() {
@@ -79,6 +86,17 @@ public class Ride {
 
 	public int getMoneySavedFromRide() {
 		return moneySavedFromRide;
+	}
+	
+	public boolean isExecuted() {
+		return executed;
+	}
+	
+	public boolean SetHitchhikerToDrive(Hitchhiker h) {
+		if (getNumOfHichhikers() >= theCar.getNumOfSeatsAvailable())
+			return false;
+		hitchhikers.add(h);
+		return true;
 	}
 	
 	
