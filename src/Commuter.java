@@ -1,20 +1,22 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Commuter extends Person{
 	
 	private int numOfRides;
 	private int numOfCars;
-	private ArrayList<Car> carsOwned;
-	private ArrayList<Ride> historyRides;
+	private List<Car> carsOwned;
+	private List<Ride> historyRides;
+	private List<Ride> plannedRides;
 	
-	public Commuter(int numOfCars, ArrayList<Car> carsOwned, String name, String address, int age, String city, int numOfRides) {
+	public Commuter(int numOfCars, List<Car> carsOwned, String name, String address, int age, String city) {
 		super(name, address, age, city);
-		this.numOfRides = numOfRides;
 		this.numOfCars = numOfCars;
 		this.carsOwned = carsOwned;
 		
 		this.numOfRides = 0;
 		this.historyRides = new ArrayList<>();
+		this.plannedRides = new ArrayList<>();
 	}
 
 	public int getNumOfRides() {
@@ -25,8 +27,7 @@ public class Commuter extends Person{
 		this.numOfRides = numOfRides;
 	}
 
-	
-	public ArrayList<Car> getCarsOwned() {
+	public List<Car> getCarsOwned() {
 		return carsOwned;
 	}
 
@@ -38,8 +39,28 @@ public class Commuter extends Person{
 		return numOfCars;
 	}
 
-	public ArrayList<Ride> getHistoryRides() {
+	public List<Ride> getHistoryRides() {
 		return historyRides;
+	}
+	
+	public List<Ride> getPlannedRides() {
+		return plannedRides;
+	}
+	
+	public int getNumPlannedDrivers() {
+		return plannedRides.size();
+	}
+
+	public void createRide() {
+		
+	}
+	
+	/** returns false if ride not executed */
+	public boolean addRideToHistory(Ride r) {
+		if (!r.isExecuted())
+			return false;
+		historyRides.add(r);
+		return true;
 	}
 	
 	

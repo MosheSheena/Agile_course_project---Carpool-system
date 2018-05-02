@@ -8,9 +8,9 @@ public class RideDriver extends Commuter{
 	private int numOfRidesAsDriver;
 	private int totalMoneySaved;
 	
-	public RideDriver(int numOfCars, ArrayList<Car> carsOwned, String name, String address, int age, String city,
-			int numOfRides) {
-		super(numOfCars, carsOwned, name, address, age, city, numOfRides);
+	public RideDriver(int numOfCars, ArrayList<Car> carsOwned, String name, String address,
+			int age, String city) {
+		super(numOfCars, carsOwned, name, address, age, city);
 
 		this.numOfRidesAsDriver = 0;
 		this.totalMoneySaved = 0;

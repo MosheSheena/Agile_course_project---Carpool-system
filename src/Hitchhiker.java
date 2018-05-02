@@ -7,7 +7,7 @@ public class Hitchhiker extends Commuter{
 	
 	public Hitchhiker(int numOfCars, ArrayList<Car> carsOwned, String name, String address, int age, String city,
 			int numOfRides) {
-		super(numOfCars, carsOwned, name, address, age, city, numOfRides);
+		super(numOfCars, carsOwned, name, address, age, city);
 		this.totalMoneySpent = 0;
 		this.numRidesAsHitchhiker = 0;
 	}
@@ -28,6 +28,9 @@ public class Hitchhiker extends Commuter{
 		this.numRidesAsHitchhiker = numRidesAsHitchhiker;
 	}
 	
+	public void pay(int amount) {
+		totalMoneySpent += amount;
+	}	
 	
 	
 }

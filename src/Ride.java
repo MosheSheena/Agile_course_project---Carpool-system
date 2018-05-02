@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Ride {
 	
@@ -10,29 +11,23 @@ public class Ride {
 	private String source;
 	private int pricePerHitchhiker;
 	private Car theCar;
-	private RideDriver carOwner;
-	private ArrayList<Hitchhiker> hitchhikers;
+	private RideDriver rideDriver;
+	private List<Hitchhiker> hitchhikers;
 	private int moneySavedFromRide;
 	private boolean executed;
 	
-	public Ride(String destination, String source, Car theCar, 
-			RideDriver carOwner, ArrayList<Hitchhiker> hitchhikers) {
+	public Ride(String destination, String source, List<Hitchhiker> hitchhikers) {
 		this.destination = destination;
 		this.source = source;
-		this.theCar = theCar;
-		this.carOwner = carOwner;
 		this.hitchhikers = hitchhikers;
 		this.executed = false;
 	}
 	
-	
 	// constructor for a planned drive
-	public Ride(String destination, String source, int pricePerHitchhiker, Car theCar, RideDriver carOwner) {
+	public Ride(String destination, String source, int pricePerHitchhiker) {
 		this.destination = destination;
 		this.source = source;
 		this.pricePerHitchhiker = pricePerHitchhiker;
-		this.theCar = theCar;
-		this.carOwner = carOwner;
 		this.executed = false;
 	}
 
@@ -60,15 +55,16 @@ public class Ride {
 		this.theCar = theCar;
 	}
 
-	public RideDriver getCarOwner() {
-		return carOwner;
+	public RideDriver getRideDriver() {
+		return rideDriver;
 	}
 
-	public void setCarOwner(RideDriver carOwner) {
-		this.carOwner = carOwner;
+	public void setRideDriver(RideDriver carOwner, Car theCar) {
+		this.rideDriver = carOwner;
+		setTheCar(theCar);
 	}
 
-	public ArrayList<Hitchhiker> getHitchhikers() {
+	public List<Hitchhiker> getHitchhikers() {
 		return hitchhikers;
 	}
 
@@ -92,12 +88,27 @@ public class Ride {
 		return executed;
 	}
 	
-	public boolean SetHitchhikerToDrive(Hitchhiker h) {
+	public boolean addHitchhikerToDrive(Hitchhiker h) {
 		if (getNumOfHichhikers() >= theCar.getNumOfSeatsAvailable())
 			return false;
 		hitchhikers.add(h);
 		return true;
 	}
 	
+	public void assignDriver(RideDriver rd) {
+		rideDriver = rd;
+	}
 	
+	public boolean rideHasDriver() {
+		return rideDriver != null;
+	}
+	
+	public boolean executeRide() {
+		if (rideDriver == null)
+			return false;
+		if (theCar == null)
+			return false;
+		executed = true;
+		return true;
+	}
 }
