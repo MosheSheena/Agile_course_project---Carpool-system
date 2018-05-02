@@ -1,68 +1,75 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Commuter extends Person{
+public abstract class Commuter extends Person{
 	
-	private int numOfRides;
-	private int numOfCars;
 	private List<Car> carsOwned;
-	private List<Ride> historyRides;
+	private List<Ride> executedRides;
 	private List<Ride> plannedRides;
 	
-	public Commuter(int numOfCars, List<Car> carsOwned, String name, String address, int age, String city) {
-		super(name, address, age, city);
-		this.numOfCars = numOfCars;
-		this.carsOwned = carsOwned;
+	public Commuter(int id, String name, String address, int age, String city) {
+		super(id, name, address, age, city);
 		
-		this.numOfRides = 0;
-		this.historyRides = new ArrayList<>();
+		this.carsOwned = new ArrayList<>();
+		this.executedRides = new ArrayList<>();
 		this.plannedRides = new ArrayList<>();
 	}
+	
+	/** begin of getters */
 
-	public int getNumOfRides() {
-		return numOfRides;
+	public int getNumOfPlannedRides() {
+		return plannedRides.size();
 	}
-
-	public void setNumOfRides(int numOfRides) {
-		this.numOfRides = numOfRides;
+	
+	public int getNumOfExecutedRides() {
+		return executedRides.size();
 	}
 
 	public List<Car> getCarsOwned() {
 		return carsOwned;
 	}
-
-	public void setCarsOwned(ArrayList<Car> carsOwned) {
-		this.carsOwned = carsOwned;
-	}
-
+	
 	public int getNumOfCars() {
-		return numOfCars;
+		return carsOwned.size();
 	}
 
 	public List<Ride> getHistoryRides() {
-		return historyRides;
+		return executedRides;
 	}
 	
 	public List<Ride> getPlannedRides() {
 		return plannedRides;
 	}
 	
-	public int getNumPlannedDrivers() {
-		return plannedRides.size();
+	/** end of getters */
+	
+	public void addCar(Car car) {
+		carsOwned.add(car);
 	}
-
-	public void createRide() {
-		
+	
+	public void removeCar(Car car) {
+		carsOwned.remove(car);
+	}
+	
+	public void addRide(Ride ride) {
+		plannedRides.add(ride);
+	}
+	
+	public boolean executeRide(Ride ride) {
+		plannedRides.remove(ride);
+		return addRideToHistory(ride);
 	}
 	
 	/** returns false if ride not executed */
-	public boolean addRideToHistory(Ride r) {
-		if (!r.isExecuted())
+	public boolean addRideToHistory(Ride ride) {
+		if (!ride.isExecuted())
 			return false;
-		historyRides.add(r);
+		executedRides.add(ride);
 		return true;
 	}
-	
-	
 
+	public Car getDefaultCar() {
+		return carsOwned.get(0);
+	}
+	
 }

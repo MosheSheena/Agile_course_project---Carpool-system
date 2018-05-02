@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Ride {
 	
@@ -12,24 +12,19 @@ public class Ride {
 	private int pricePerHitchhiker;
 	private Car theCar;
 	private RideDriver rideDriver;
-	private List<Hitchhiker> hitchhikers;
+	private Set<Hitchhiker> hitchhikers;
 	private int moneySavedFromRide;
 	private boolean executed;
 	
-	public Ride(String destination, String source, List<Hitchhiker> hitchhikers) {
+	public Ride(String destination, String source) {
 		this.destination = destination;
 		this.source = source;
-		this.hitchhikers = hitchhikers;
+		this.hitchhikers = new HashSet<>();
+		this.pricePerHitchhiker = calcPriceOfRide();
 		this.executed = false;
 	}
 	
-	// constructor for a planned drive
-	public Ride(String destination, String source, int pricePerHitchhiker) {
-		this.destination = destination;
-		this.source = source;
-		this.pricePerHitchhiker = pricePerHitchhiker;
-		this.executed = false;
-	}
+	/** begin of getters / setters */
 
 	public String getDestination() {
 		return destination;
@@ -51,7 +46,7 @@ public class Ride {
 		return theCar;
 	}
 
-	public void setTheCar(Car theCar) {
+	private void setTheCar(Car theCar) {
 		this.theCar = theCar;
 	}
 
@@ -59,19 +54,10 @@ public class Ride {
 		return rideDriver;
 	}
 
-	public void setRideDriver(RideDriver carOwner, Car theCar) {
-		this.rideDriver = carOwner;
-		setTheCar(theCar);
-	}
-
-	public List<Hitchhiker> getHitchhikers() {
+	public Set<Hitchhiker> getHitchhikers() {
 		return hitchhikers;
 	}
-
-	public void setHitchhikers(ArrayList<Hitchhiker> hitchhikers) {
-		this.hitchhikers = hitchhikers;
-	}
-
+	
 	public int getNumOfHichhikers() {
 		return hitchhikers.size();
 	}
@@ -87,16 +73,28 @@ public class Ride {
 	public boolean isExecuted() {
 		return executed;
 	}
-	
-	public boolean addHitchhikerToDrive(Hitchhiker h) {
+
+	/** end of getters / setters*/
+
+	public boolean addHitchhiker(Hitchhiker hitchhiker) {
 		if (getNumOfHichhikers() >= theCar.getNumOfSeatsAvailable())
 			return false;
-		hitchhikers.add(h);
+		hitchhikers.add(hitchhiker);
 		return true;
 	}
 	
-	public void assignDriver(RideDriver rd) {
-		rideDriver = rd;
+	public void assignRideDriver(RideDriver carOwner, Car theCar) {
+		this.rideDriver = carOwner;
+		setTheCar(theCar);
+	}
+	
+	// smart assignment to ride
+	public void defaultRideAssignment(Ride ride, Commuter commuter) {
+		if (commuter instanceof RideDriver)
+			ride.assignRideDriver((RideDriver)commuter, commuter.getDefaultCar());
+		else {// commuter is hitchhiker
+			ride.addHitchhiker((Hitchhiker)commuter);
+		}
 	}
 	
 	public boolean rideHasDriver() {
@@ -111,4 +109,18 @@ public class Ride {
 		executed = true;
 		return true;
 	}
+	
+	private int calcPriceOfRide() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String toString() {
+		return "Ride [destination=" + destination + ", source=" + source + ", pricePerHitchhiker=" + pricePerHitchhiker
+				+ ", theCar=" + theCar + ", rideDriver=" + rideDriver + ", hitchhikers=" + hitchhikers
+				+ ", moneySavedFromRide=" + moneySavedFromRide + ", executed=" + executed + "]";
+	}
+	
+	
 }

@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 public class RideDriver extends Commuter{
 
@@ -8,9 +7,8 @@ public class RideDriver extends Commuter{
 	private int numOfRidesAsDriver;
 	private int totalMoneySaved;
 	
-	public RideDriver(int numOfCars, ArrayList<Car> carsOwned, String name, String address,
-			int age, String city) {
-		super(numOfCars, carsOwned, name, address, age, city);
+	public RideDriver(int id, String name, String address, int age, String city) {
+		super(id, name, address, age, city);
 
 		this.numOfRidesAsDriver = 0;
 		this.totalMoneySaved = 0;
@@ -31,7 +29,11 @@ public class RideDriver extends Commuter{
 	public void setTotalMoneySaved(int totalMoneySaved) {
 		this.totalMoneySaved = totalMoneySaved;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "RideDriver [numOfRidesAsDriver=" + numOfRidesAsDriver + ", totalMoneySaved=" + totalMoneySaved + "]";
+	}
 	
 	
 }

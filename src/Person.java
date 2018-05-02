@@ -1,43 +1,72 @@
 
 public class Person {
 
+	private int id;
 	private String name;
 	private String address;
 	private String city;
 	private int age;
 	
-	public Person(String name, String address, int age, String city) {
+	public Person(int id, String name, String address, int age, String city) {
 		
+		this.id = id;
 		this.name = name;
 		this.address = address;
 		this.age = age;
 		this.city = city;
 	}
 	
-	public String getName() {
-		return name;
+	/** begin of getters / setters */
+	
+	public int getId() {
+		return id;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-	public String getCity() {
-		return city;
+	
+	public String getName() {return name;}
+	
+	public void setName(String name) {this.name = name;}
+	
+	public String getAddress() {return address;}
+	
+	public void setAddress(String address) {this.address = address;}
+	
+	public int getAge() {return age;}
+	
+	public void setAge(int age) {this.age = age;}
+	
+	public String getCity() {return city;}
+
+	public void setCity(String city) {this.city = city;}
+	
+	/** end of getters / setters */
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + age;
+		result = prime * result + ((city == null) ? 0 : city.hashCode());
+		result = prime * result + id;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Person other = (Person) obj;
+		return this.id == other.id;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", city=" + city + ", age=" + age + "]";
 	}
 	
 	

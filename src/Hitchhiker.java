@@ -1,13 +1,11 @@
-import java.util.ArrayList;
 
 public class Hitchhiker extends Commuter{
 
 	private int totalMoneySpent;
 	private int numRidesAsHitchhiker;
 	
-	public Hitchhiker(int numOfCars, ArrayList<Car> carsOwned, String name, String address, int age, String city,
-			int numOfRides) {
-		super(numOfCars, carsOwned, name, address, age, city);
+	public Hitchhiker(int id, String name, String address, int age, String city) {
+		super(id, name, address, age, city);
 		this.totalMoneySpent = 0;
 		this.numRidesAsHitchhiker = 0;
 	}
@@ -30,6 +28,12 @@ public class Hitchhiker extends Commuter{
 	
 	public void pay(int amount) {
 		totalMoneySpent += amount;
+	}
+
+	@Override
+	public String toString() {
+		return "Hitchhiker [totalMoneySpent=" + totalMoneySpent + ", numRidesAsHitchhiker=" + numRidesAsHitchhiker
+				+ "]";
 	}	
 	
 	
