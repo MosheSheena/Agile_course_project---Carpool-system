@@ -36,8 +36,7 @@ public class Car {
 	
 	@Override
 	public String toString() {
-		return "Car [model=" + model + ", color=" + color + ", numOfSeatsAvailable=" + numOfSeatsAvailable
-				+ ", gasolineConsumptionPerKM=" + gasolineConsumptionPerKM + ", registrationPlate=" + registrationPlate
-				+ "]";
+		return "Car " + model + ", color " + color + ", numOfSeatsAvailable " + numOfSeatsAvailable
+				+ ", gasolineConsumptionPerKM " + gasolineConsumptionPerKM + ", registrationPlate " + registrationPlate;
 	}
 }

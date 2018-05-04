@@ -18,9 +18,7 @@ public class Person {
 	
 	/** begin of getters / setters */
 	
-	public int getId() {
-		return id;
-	}
+	public int getId() {return id;}
 	
 	public String getName() {return name;}
 	
@@ -66,7 +64,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", city=" + city + ", age=" + age + "]";
+		return "Person: \nid " + id + ", \nname " + name + " \naddress " + address + ", \ncity " + city + ", \nage " + age;
 	}
 	
 	

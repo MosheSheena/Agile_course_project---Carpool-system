@@ -50,6 +50,16 @@ public class Carpool {
 		aRide.defaultRideAssignment(ride, commuter);
 		return true;
 	}
+
+	public boolean removeCommuterFromRide(Commuter commuter, Ride ride) {
+		if(!plannedRides.contains(ride))
+			return false;
+		boolean removedFromRide = ride.removeCommuter(commuter);
+		if (!removedFromRide)
+			return false;
+		
+		return commuter.removeRide(ride);
+	}
 	
 	public List<Ride> history() {
 		// do not allow outsiders to change history

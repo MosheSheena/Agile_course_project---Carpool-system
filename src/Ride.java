@@ -26,53 +26,29 @@ public class Ride {
 	
 	/** begin of getters / setters */
 
-	public String getDestination() {
-		return destination;
-	}
+	public String getDestination() {return destination;}
 
-	public void setDestination(String destination) {
-		this.destination = destination;
-	}
+	public void setDestination(String destination) {this.destination = destination;}
 
-	public String getSource() {
-		return source;
-	}
+	public String getSource() {return source;}
 
-	public void setSource(String source) {
-		this.source = source;
-	}
+	public void setSource(String source) {this.source = source;}
 
-	public Car getTheCar() {
-		return theCar;
-	}
+	public Car getTheCar() {return theCar;}
 
-	private void setTheCar(Car theCar) {
-		this.theCar = theCar;
-	}
+	private void setTheCar(Car theCar) {this.theCar = theCar;}
 
-	public RideDriver getRideDriver() {
-		return rideDriver;
-	}
+	public RideDriver getRideDriver() {return rideDriver;}
 
-	public Set<Hitchhiker> getHitchhikers() {
-		return hitchhikers;
-	}
+	public Set<Hitchhiker> getHitchhikers() {return hitchhikers;}
 	
-	public int getNumOfHichhikers() {
-		return hitchhikers.size();
-	}
+	public int getNumOfHichhikers() {return hitchhikers.size();}
 
-	public int getPricePerHitchhiker() {
-		return pricePerHitchhiker;
-	}
+	public int getPricePerHitchhiker() {return pricePerHitchhiker;}
 
-	public int getMoneySavedFromRide() {
-		return moneySavedFromRide;
-	}
+	public int getMoneySavedFromRide() {return moneySavedFromRide;}
 	
-	public boolean isExecuted() {
-		return executed;
-	}
+	public boolean isExecuted() {return executed;}
 
 	/** end of getters / setters*/
 
@@ -86,6 +62,11 @@ public class Ride {
 	public void assignRideDriver(RideDriver carOwner, Car theCar) {
 		this.rideDriver = carOwner;
 		setTheCar(theCar);
+	}
+
+	public void removeRideDriver(RideDriver rideDriver) {
+		this.rideDriver = null;
+		setTheCar(null); //remove car
 	}
 	
 	// smart assignment to ride
@@ -117,9 +98,28 @@ public class Ride {
 
 	@Override
 	public String toString() {
-		return "Ride [destination=" + destination + ", source=" + source + ", pricePerHitchhiker=" + pricePerHitchhiker
-				+ ", theCar=" + theCar + ", rideDriver=" + rideDriver + ", hitchhikers=" + hitchhikers
-				+ ", moneySavedFromRide=" + moneySavedFromRide + ", executed=" + executed + "]";
+		return "Ride: \ndestination " + destination + ", \nsource " + source + ", \npricePerHitchhiker " + pricePerHitchhiker
+				+ ", \ntheCar " + theCar + ", \nrideDriver " + rideDriver + ", \nhitchhikers" + hitchhikers
+				+ ", \nmoneySavedFromRide " + moneySavedFromRide + ", \nexecuted " + executed;
+	}
+
+	public boolean hasCommuter(Commuter commuter) {
+		if(commuter instanceof RideDriver) 
+			return rideDriver == (RideDriver) commuter;
+
+		return hitchhikers.contains(commuter);
+	}
+
+	public boolean removeCommuter(Commuter commuter) {
+		if(!hasCommuter(commuter))
+			return false;
+		if(commuter instanceof RideDriver) {
+			if(rideDriver == (RideDriver)commuter) {
+				removeRideDriver((RideDriver)commuter);
+				return true;
+			}
+		}
+		return hitchhikers.remove(commuter);
 	}
 	
 	

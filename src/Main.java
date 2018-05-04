@@ -17,6 +17,9 @@ public class Main {
 		carpool.assignCommuterToRide(c2, rideToAdd);
 		
 		System.out.println(rideToAdd);
+
+		carpool.removeCommuterFromRide(c2, rideToAdd);
+		System.out.println("\n\n" +rideToAdd);
 	}
 
 }

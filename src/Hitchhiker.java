@@ -10,30 +10,19 @@ public class Hitchhiker extends Commuter{
 		this.numRidesAsHitchhiker = 0;
 	}
 
-	public int getTotalMoneySpent() {
-		return totalMoneySpent;
-	}
+	public int getTotalMoneySpent() {return totalMoneySpent;}
 
-	public void setTotalMoneySpent(int totalMoneySpent) {
-		this.totalMoneySpent = totalMoneySpent;
-	}
+	public void setTotalMoneySpent(int totalMoneySpent) {this.totalMoneySpent = totalMoneySpent;}
 
-	public int getNumRidesAsHitchhiker() {
-		return numRidesAsHitchhiker;
-	}
+	public int getNumRidesAsHitchhiker() {return numRidesAsHitchhiker;}
 
-	public void setNumRidesAsHitchhiker(int numRidesAsHitchhiker) {
-		this.numRidesAsHitchhiker = numRidesAsHitchhiker;
-	}
+	public void setNumRidesAsHitchhiker(int numRidesAsHitchhiker) {this.numRidesAsHitchhiker = numRidesAsHitchhiker;}
 	
-	public void pay(int amount) {
-		totalMoneySpent += amount;
-	}
+	public void pay(int amount) {totalMoneySpent += amount;}
 
 	@Override
 	public String toString() {
-		return "Hitchhiker [totalMoneySpent=" + totalMoneySpent + ", numRidesAsHitchhiker=" + numRidesAsHitchhiker
-				+ "]";
+		return super.toString() + "\nHitchhiker: \ntotalMoneySpent " + totalMoneySpent + ", \nnumRidesAsHitchhiker " + numRidesAsHitchhiker;
 	}	
 	
 	

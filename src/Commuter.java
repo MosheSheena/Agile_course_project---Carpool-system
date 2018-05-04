@@ -17,43 +17,29 @@ public abstract class Commuter extends Person{
 	
 	/** begin of getters */
 
-	public int getNumOfPlannedRides() {
-		return plannedRides.size();
-	}
+	public int getNumOfPlannedRides() {return plannedRides.size();}
 	
-	public int getNumOfExecutedRides() {
-		return executedRides.size();
-	}
+	public int getNumOfExecutedRides() {return executedRides.size();}
 
-	public List<Car> getCarsOwned() {
-		return carsOwned;
-	}
+	public List<Car> getCarsOwned() {return carsOwned;}
 	
-	public int getNumOfCars() {
-		return carsOwned.size();
-	}
+	public int getNumOfCars() {return carsOwned.size();}
 
-	public List<Ride> getHistoryRides() {
-		return executedRides;
-	}
+	public List<Ride> getHistoryRides() {return executedRides;}
 	
-	public List<Ride> getPlannedRides() {
-		return plannedRides;
-	}
+	public List<Ride> getPlannedRides() {return plannedRides;}
 	
 	/** end of getters */
 	
-	public void addCar(Car car) {
-		carsOwned.add(car);
-	}
+	public void addCar(Car car) {carsOwned.add(car);}
 	
-	public void removeCar(Car car) {
-		carsOwned.remove(car);
-	}
+	public void removeCar(Car car) {carsOwned.remove(car);}
 	
-	public void addRide(Ride ride) {
-		plannedRides.add(ride);
-	}
+	public void addRide(Ride ride) {plannedRides.add(ride);}
+
+	public boolean removeRide(Ride ride) {return plannedRides.remove(ride);}
+
+	public Car getDefaultCar() {return carsOwned.get(0);}
 	
 	public boolean executeRide(Ride ride) {
 		plannedRides.remove(ride);
@@ -68,8 +54,10 @@ public abstract class Commuter extends Person{
 		return true;
 	}
 
-	public Car getDefaultCar() {
-		return carsOwned.get(0);
+	@Override
+	public String toString() {
+		return super.toString() + "\nCommuter: \ncarsOwned " + carsOwned.toString() + " \nnumOfPlannedRides " + plannedRides.size() +
+		 " \nnumOfExecutedRides " + executedRides.size();
 	}
 	
 }

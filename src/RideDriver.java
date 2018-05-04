@@ -14,25 +14,17 @@ public class RideDriver extends Commuter{
 		this.totalMoneySaved = 0;
 	}
 
-	public int getNumOfRidesAsDriver() {
-		return numOfRidesAsDriver;
-	}
+	public int getNumOfRidesAsDriver() {return numOfRidesAsDriver;}
 
-	public void setNumOfRidesAsDriver(int numOfRidesAsDriver) {
-		this.numOfRidesAsDriver = numOfRidesAsDriver;
-	}
+	public void setNumOfRidesAsDriver(int numOfRidesAsDriver) {this.numOfRidesAsDriver = numOfRidesAsDriver;}
 
-	public int getTotalMoneySaved() {
-		return totalMoneySaved;
-	}
+	public int getTotalMoneySaved() {return totalMoneySaved;}
 
-	public void setTotalMoneySaved(int totalMoneySaved) {
-		this.totalMoneySaved = totalMoneySaved;
-	}
+	public void setTotalMoneySaved(int totalMoneySaved) {this.totalMoneySaved = totalMoneySaved;}
 
 	@Override
 	public String toString() {
-		return "RideDriver [numOfRidesAsDriver=" + numOfRidesAsDriver + ", totalMoneySaved=" + totalMoneySaved + "]";
+		return super.toString() + "\nRideDriver: \nnumOfRidesAsDriver " + numOfRidesAsDriver + ", \ntotalMoneySaved " + totalMoneySaved;
 	}
 	
 	
