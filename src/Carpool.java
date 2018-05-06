@@ -36,7 +36,7 @@ public class Carpool {
 	}
 	
 	public void registerRide(Ride ride, Commuter commuter) {
-		ride.defaultRideAssignment(ride, commuter);
+		ride.defaultRideAssignment(commuter);
 		commuter.addRide(ride);
 		plannedRides.add(ride);
 		// and more
@@ -47,7 +47,12 @@ public class Carpool {
 		if (foundOrNot == -1)
 			return false;
 		Ride aRide = plannedRides.get(foundOrNot);
-		aRide.defaultRideAssignment(ride, commuter);
+		aRide.defaultRideAssignment(commuter);
+		if(commuter instanceof RideDriver) {
+			// notify hitchhikers that a driver was assigned to their ride
+		} else {
+			// ask driver's confirmation about the hitchhiker and send the response to the hitchhiker
+		}
 		return true;
 	}
 
@@ -57,7 +62,11 @@ public class Carpool {
 		boolean removedFromRide = ride.removeCommuter(commuter);
 		if (!removedFromRide)
 			return false;
-		
+		if(commuter instanceof RideDriver) {
+			// notify hitchhikers that a driver was assigned to their ride
+		} else {
+			// ask driver's confirmation about the hitchhiker and send the response to the hitchhiker
+		}
 		return commuter.removeRide(ride);
 	}
 	

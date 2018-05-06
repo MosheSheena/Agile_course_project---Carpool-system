@@ -70,11 +70,12 @@ public class Ride {
 	}
 	
 	// smart assignment to ride
-	public void defaultRideAssignment(Ride ride, Commuter commuter) {
-		if (commuter instanceof RideDriver)
-			ride.assignRideDriver((RideDriver)commuter, commuter.getDefaultCar());
+	public void defaultRideAssignment(Commuter commuter) {
+		if (commuter instanceof RideDriver) {
+			assignRideDriver((RideDriver)commuter, commuter.getDefaultCar());
+		}
 		else {// commuter is hitchhiker
-			ride.addHitchhiker((Hitchhiker)commuter);
+			addHitchhiker((Hitchhiker)commuter);
 		}
 	}
 	
