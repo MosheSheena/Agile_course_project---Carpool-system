@@ -50,13 +50,13 @@ public class Ride {
 	
 	public boolean isExecuted() {return executed;}
 
-	/** end of getters / setters*/
+	/* end of getters / setters
+	 @throws NoSeatAvailableInRide*/
 
-	public boolean addHitchhiker(Hitchhiker hitchhiker) {
+	public void addHitchhiker(Hitchhiker hitchhiker) throws NoSeatAvailableInRide {
 		if (getNumOfHichhikers() >= theCar.getNumOfSeatsAvailable())
-			return false;
+			throw new NoSeatAvailableInRide("no room in ride " + this + " cannot add " + hitchhiker);
 		hitchhikers.add(hitchhiker);
-		return true;
 	}
 	
 	public void assignRideDriver(RideDriver carOwner, Car theCar) {
@@ -70,7 +70,7 @@ public class Ride {
 	}
 	
 	// smart assignment to ride
-	public void defaultRideAssignment(Commuter commuter) {
+	public void defaultRideAssignment(Commuter commuter) throws NoSeatAvailableInRide {
 		if (commuter instanceof RideDriver) {
 			assignRideDriver((RideDriver)commuter, commuter.getDefaultCar());
 		}
@@ -83,13 +83,12 @@ public class Ride {
 		return rideDriver != null;
 	}
 	
-	public boolean executeRide() {
+	public void executeRide() throws NoRideDriverAssigned, NoCarAssigned{
 		if (rideDriver == null)
-			return false;
+			throw new NoRideDriverAssigned("cannot execute ride, no driver assign");
 		if (theCar == null)
-			return false;
+			throw new NoCarAssigned("cannot execute ride, no car assign");
 		executed = true;
-		return true;
 	}
 	
 	private int calcPriceOfRide() {

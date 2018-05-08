@@ -11,10 +11,14 @@ public class Main {
 		Commuter c2 = new Hitchhiker(43547, "Moshe", "Sheena 18", 25, "Rosh Aain");
 		
 		Ride rideToAdd = new Ride("Modi'in", "Afeka");
-		carpool.registerRide(rideToAdd, c1);
-		
-		carpool.assignCommuterToRide(c1, rideToAdd);
-		carpool.assignCommuterToRide(c2, rideToAdd);
+		try {
+			carpool.registerRide(rideToAdd, c1);
+			carpool.assignCommuterToRide(c1, rideToAdd);
+			carpool.assignCommuterToRide(c2, rideToAdd);
+		} catch (NoSeatAvailableInRide e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println(rideToAdd);
 
