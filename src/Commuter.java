@@ -41,17 +41,16 @@ public abstract class Commuter extends Person{
 
 	public Car getDefaultCar() {return carsOwned.get(0);}
 	
-	public boolean executeRide(Ride ride) {
+	public void executeRide(Ride ride) throws RideNotExecutedException {
 		plannedRides.remove(ride);
-		return addRideToHistory(ride);
+		addRideToHistory(ride);
 	}
 	
 	/** returns false if ride not executed */
-	public boolean addRideToHistory(Ride ride) {
+	public void addRideToHistory(Ride ride) throws RideNotExecutedException{
 		if (!ride.isExecuted())
-			return false;
+			throw new RideNotExecutedException("Try to add ride " + ride + " to history but ride not executed");
 		executedRides.add(ride);
-		return true;
 	}
 
 	@Override

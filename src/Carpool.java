@@ -35,14 +35,14 @@ public class Carpool {
 		return true;
 	}
 	
-	public void registerRide(Ride ride, Commuter commuter) {
+	public void registerRide(Ride ride, Commuter commuter) throws NoSeatAvailableInRide {
 		ride.defaultRideAssignment(commuter);
 		commuter.addRide(ride);
 		plannedRides.add(ride);
 		// and more
 	}
 	
-	public boolean assignCommuterToRide(Commuter commuter, Ride ride) {
+	public boolean assignCommuterToRide(Commuter commuter, Ride ride) throws NoSeatAvailableInRide {
 		int foundOrNot = plannedRides.indexOf(ride);
 		if (foundOrNot == -1)
 			return false;
