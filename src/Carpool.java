@@ -75,4 +75,15 @@ public class Carpool {
 		return new ArrayList<Ride>(executedRides);
 	}
 	
+	public List<Ride> getAvaCarPools() {
+		List<Ride> avaPool = new ArrayList<Ride>(executedRides);
+		
+		for (Ride carInRide : this.plannedRides ) {
+			if (carInRide.getNumOfHichhikers() <= carInRide.getTheCar().getNumOfSeatsAvailable())
+				// Available seats and the car ready for ride
+				avaPool.add(carInRide);	
+		}
+		return avaPool;
+	}
+	
 }
