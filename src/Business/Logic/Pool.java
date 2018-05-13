@@ -41,6 +41,10 @@ public class Pool {
         return false;
     }
 
+    public static boolean isRideExist(Ride r) {
+        return rides.contains(r);
+    }
+
     public static String prettyPrint() {
         StringBuilder s = new StringBuilder();
         s.append("\nNumber of rides: " + numRides.toString());
