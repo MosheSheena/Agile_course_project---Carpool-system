@@ -1,3 +1,5 @@
+package Hitchhiker.side;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -51,11 +53,11 @@ public class Ride {
 	public boolean isExecuted() {return executed;}
 
 	/* end of getters / setters
-	 @throws NoSeatAvailableInRide*/
+	 @throws Hitchhiker.side.NoSeatAvailableInRideException*/
 
-	public void addHitchhiker(Hitchhiker hitchhiker) throws NoSeatAvailableInRide {
+	public void addHitchhiker(Hitchhiker hitchhiker) throws NoSeatAvailableInRideException {
 		if (getNumOfHichhikers() >= theCar.getNumOfSeatsAvailable())
-			throw new NoSeatAvailableInRide("no room in ride " + this + " cannot add " + hitchhiker);
+			throw new NoSeatAvailableInRideException("no room in ride " + this + " cannot add " + hitchhiker);
 		hitchhikers.add(hitchhiker);
 	}
 	
@@ -70,7 +72,7 @@ public class Ride {
 	}
 	
 	// smart assignment to ride
-	public void defaultRideAssignment(Commuter commuter) throws NoSeatAvailableInRide {
+	public void defaultRideAssignment(Commuter commuter) throws NoSeatAvailableInRideException {
 		if (commuter instanceof RideDriver) {
 			assignRideDriver((RideDriver)commuter, commuter.getDefaultCar());
 		}
@@ -83,11 +85,11 @@ public class Ride {
 		return rideDriver != null;
 	}
 	
-	public void executeRide() throws NoRideDriverAssigned, NoCarAssigned{
+	public void executeRide() throws NoRideDriverAssignedException, NoCarAssignedException {
 		if (rideDriver == null)
-			throw new NoRideDriverAssigned("cannot execute ride, no driver assign");
+			throw new NoRideDriverAssignedException("cannot execute ride, no driver assign");
 		if (theCar == null)
-			throw new NoCarAssigned("cannot execute ride, no car assign");
+			throw new NoCarAssignedException("cannot execute ride, no car assign");
 		executed = true;
 	}
 	
@@ -98,7 +100,7 @@ public class Ride {
 
 	@Override
 	public String toString() {
-		return "Ride: \ndestination " + destination + ", \nsource " + source + ", \npricePerHitchhiker " + pricePerHitchhiker
+		return "Hitchhiker.side.Ride: \ndestination " + destination + ", \nsource " + source + ", \npricePerHitchhiker " + pricePerHitchhiker
 				+ ", \ntheCar " + theCar + ", \nrideDriver " + rideDriver + ", \nhitchhikers" + hitchhikers
 				+ ", \nmoneySavedFromRide " + moneySavedFromRide + ", \nexecuted " + executed;
 	}

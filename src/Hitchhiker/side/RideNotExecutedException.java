@@ -1,5 +1,7 @@
+package Hitchhiker.side;
+
 /**
- * RideNotExecutedException
+ * Hitchhiker.side.RideNotExecutedException
  */
 public class RideNotExecutedException extends Exception{
 

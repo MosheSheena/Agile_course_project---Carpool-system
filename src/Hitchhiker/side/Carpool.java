@@ -1,3 +1,5 @@
+package Hitchhiker.side;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +17,7 @@ public class Carpool {
 	
 	private static Carpool carpool = null;
 	
-	protected Carpool() {};
+	protected Carpool() {}
 	
 	public static Carpool getInstance() { 
 		if (carpool == null) {
@@ -29,20 +31,26 @@ public class Carpool {
 	public int getNumOfAvailableRides() { return plannedRides.size();}
 	
 	public boolean executeRide(Ride ride) {
+		if (!plannedRides.contains(ride))
+			return false;
+		if(!ride.rideHasDriver())
+			return false;
+		if(ride.getNumOfHichhikers() == 0)
+			return false;
 		executedRides.add(ride);
 		plannedRides.remove(ride);
 		// and more
 		return true;
 	}
 	
-	public void registerRide(Ride ride, Commuter commuter) throws NoSeatAvailableInRide {
+	public void registerRide(Ride ride, Commuter commuter) throws NoSeatAvailableInRideException {
 		ride.defaultRideAssignment(commuter);
 		commuter.addRide(ride);
 		plannedRides.add(ride);
 		// and more
 	}
 	
-	public boolean assignCommuterToRide(Commuter commuter, Ride ride) throws NoSeatAvailableInRide {
+	public boolean assignCommuterToRide(Commuter commuter, Ride ride) throws NoSeatAvailableInRideException {
 		int foundOrNot = plannedRides.indexOf(ride);
 		if (foundOrNot == -1)
 			return false;

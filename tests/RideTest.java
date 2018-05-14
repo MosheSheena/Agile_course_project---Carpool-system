@@ -1,3 +1,4 @@
+import Hitchhiker.side.*;
 import org.junit.*;
 
 import static org.junit.Assert.*;
@@ -22,7 +23,7 @@ public class RideTest {
         ride = null;
     }
 
-    @Test(expected = NoSeatAvailableInRide.class)
+    @Test(expected = NoSeatAvailableInRideException.class)
     public void addTooManyHitchhikers() throws Exception{
 
         Hitchhiker hitchhiker = new Hitchhiker(12434, "amit", "karlivah", 23, "tlv");
@@ -40,7 +41,7 @@ public class RideTest {
         try {
             ride.executeRide();
         } catch (Exception e) {
-            assert(e instanceof  NoRideDriverAssigned || e instanceof NoCarAssigned);
+            assert(e instanceof NoRideDriverAssignedException || e instanceof NoCarAssignedException);
         }
     }
 
@@ -54,10 +55,10 @@ public class RideTest {
         try {
             ride.executeRide();
             assertTrue(ride.isExecuted());
-        } catch (NoRideDriverAssigned noRideDriverAssigned) {
+        } catch (NoRideDriverAssignedException noRideDriverAssigned) {
             noRideDriverAssigned.printStackTrace();
-        } catch (NoCarAssigned noCarAssigned) {
-            noCarAssigned.printStackTrace();
+        } catch (NoCarAssignedException noCarAssignedException) {
+            noCarAssignedException.printStackTrace();
         }
     }
 
@@ -69,8 +70,8 @@ public class RideTest {
         assertFalse(ride.hasCommuter(c));
         try {
             ride.addHitchhiker((Hitchhiker)c);
-        } catch (NoSeatAvailableInRide noSeatAvailableInRide) {
-            noSeatAvailableInRide.printStackTrace();
+        } catch (NoSeatAvailableInRideException noSeatAvailableInRideException) {
+            noSeatAvailableInRideException.printStackTrace();
         }
         assertTrue(ride.hasCommuter(c));
 

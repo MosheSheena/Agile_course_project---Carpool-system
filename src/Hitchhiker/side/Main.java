@@ -1,3 +1,4 @@
+package Hitchhiker.side;
 
 public class Main {
 
@@ -15,7 +16,7 @@ public class Main {
 			carpool.registerRide(rideToAdd, c1);
 			carpool.assignCommuterToRide(c1, rideToAdd);
 			carpool.assignCommuterToRide(c2, rideToAdd);
-		} catch (NoSeatAvailableInRide e) {
+		} catch (NoSeatAvailableInRideException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

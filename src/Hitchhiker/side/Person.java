@@ -1,3 +1,4 @@
+package Hitchhiker.side;
 
 public class Person {
 
@@ -64,7 +65,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person: \nid " + id + ", \nname " + name + " \naddress " + address + ", \ncity " + city + ", \nage " + age;
+		return "Hitchhiker.side.Person: \nid " + id + ", \nname " + name + " \naddress " + address + ", \ncity " + city + ", \nage " + age;
 	}
 	
 	

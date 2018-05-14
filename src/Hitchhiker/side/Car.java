@@ -1,3 +1,4 @@
+package Hitchhiker.side;
 
 public class Car {
 
@@ -36,7 +37,7 @@ public class Car {
 	
 	@Override
 	public String toString() {
-		return "Car " + model + ", color " + color + ", numOfSeatsAvailable " + numOfSeatsAvailable
+		return "Hitchhiker.side.Car " + model + ", color " + color + ", numOfSeatsAvailable " + numOfSeatsAvailable
 				+ ", gasolineConsumptionPerKM " + gasolineConsumptionPerKM + ", registrationPlate " + registrationPlate;
 	}
 }

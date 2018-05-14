@@ -1,3 +1,5 @@
+package Hitchhiker.side;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +49,7 @@ public abstract class Commuter extends Person{
 	}
 	
 	/** returns false if ride not executed */
-	public void addRideToHistory(Ride ride) throws RideNotExecutedException{
+	private void addRideToHistory(Ride ride) throws RideNotExecutedException{
 		if (!ride.isExecuted())
 			throw new RideNotExecutedException("Try to add ride " + ride + " to history but ride not executed");
 		executedRides.add(ride);
@@ -55,7 +57,7 @@ public abstract class Commuter extends Person{
 
 	@Override
 	public String toString() {
-		return super.toString() + "\nCommuter: \ncarsOwned " + carsOwned.toString() + " \nnumOfPlannedRides " + plannedRides.size() +
+		return super.toString() + "\nHitchhiker.side.Commuter: \ncarsOwned " + carsOwned.toString() + " \nnumOfPlannedRides " + plannedRides.size() +
 		 " \nnumOfExecutedRides " + executedRides.size();
 	}
 	
