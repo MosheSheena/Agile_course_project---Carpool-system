@@ -6,11 +6,11 @@ import java.util.Objects;
 public class Person {
 
     private String name;
-    private Date birthDate;
+    private String birthDate;
     private Integer ID;
     private boolean hasDriverLicense;
 
-    public Person(String name, Date birthDate, boolean hasDriverLicense) {
+    public Person(String name, String birthDate, boolean hasDriverLicense) {
         this.name = name;
         this.birthDate = birthDate;
         this.hasDriverLicense = hasDriverLicense;
@@ -24,11 +24,11 @@ public class Person {
         this.name = name;
     }
 
-    public Date getBirthdate() {
+    public String getBirthdate() {
         return birthDate;
     }
 
-    public void setBirthdate(Date birthdate) {
+    public void setBirthdate(String birthdate) {
         this.birthDate = birthdate;
     }
 

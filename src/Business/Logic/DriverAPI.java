@@ -12,8 +12,9 @@ public class DriverAPI {
 
     private DriverAPI() {}
 
-    public static boolean offerNewRide(Driver driver, Location from, Location to, LocalDateTime timeDepart) {
-        Ride newRide = new Ride(driver, from, to);
+    public static boolean offerNewRide(Driver driver, Location from, Location to, String timeDepart) {
+        Ride newRide = new Ride(from, to);
+        newRide.assignDriver(driver);
         return Pool.addRide(newRide);
     }
 

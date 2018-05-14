@@ -6,16 +6,15 @@ public class Ride {
 
     private static Integer idCounter = 1;
     private Integer identifier;
-    private Driver assignedDriver;
+    private Driver assignedDriver = null;
     private Integer numAvailableSeats;
     private Set<Passenger> passengers;
     private Location driverSrc;
     private Location driverDst;
 
-    public Ride(Driver assignedDriver, Location driverSrc, Location driverDst) {
+    public Ride(Location driverSrc, Location driverDst) {
         this.identifier = generateRideIdentifier();
         this.passengers = new HashSet<>();
-        this.assignedDriver = assignedDriver;
         this.numAvailableSeats = this.assignedDriver.getCar().getNumOfSeats(); //TODO: -1 or not?
         this.driverSrc = driverSrc;
         this.driverDst = driverDst;
@@ -25,16 +24,18 @@ public class Ride {
         return identifier;
     }
 
-    public void setIdentifier(Integer identifier) {
-        this.identifier = identifier;
-    }
-
     public Driver getAssignedDriver() {
         return assignedDriver;
     }
 
-    public void setAssignedDriver(Driver assignedDriver) {
-        this.assignedDriver = assignedDriver;
+    public boolean assignDriver(Driver driver) {
+
+        if(!(this.assignedDriver == driver)) {
+            this.assignedDriver = driver;
+            this.assignedDriver.assignRide(this);
+            return true;
+        }
+        return false;
     }
 
     public Set<Passenger> getPassengers() {

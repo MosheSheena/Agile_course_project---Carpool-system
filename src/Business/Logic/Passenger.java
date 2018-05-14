@@ -8,7 +8,7 @@ public class Passenger extends Person{
     private Location source;
     private Location destination;
 
-    public Passenger(String name, Date birthDate, boolean hasDriverLicense, Location source, Location destination) {
+    public Passenger(String name, String birthDate, boolean hasDriverLicense, Location source, Location destination) {
         super(name, birthDate, hasDriverLicense);
         this.source = source;
         this.destination = destination;

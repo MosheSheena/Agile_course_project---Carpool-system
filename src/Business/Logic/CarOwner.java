@@ -7,7 +7,7 @@ public class CarOwner extends Person{
 
     private Car car;
 
-    public CarOwner(String name, Date birthDate, boolean hasDriverLicense, Car car) {
+    public CarOwner(String name, String birthDate, boolean hasDriverLicense, Car car) {
         super(name, birthDate, hasDriverLicense);
         this.car = car;
     }
