@@ -1,4 +1,4 @@
-package Hitchhiker.side;
+package Core.Logic;
 
 public class RideDriver extends Commuter{
 
@@ -34,7 +34,7 @@ public class RideDriver extends Commuter{
 
 	@Override
 	public String toString() {
-		return super.toString() + "\nHitchhiker.side.RideDriver: \nnumOfRidesAsDriver " + numOfRidesAsDriver + ", \ntotalMoneySaved " + totalMoneySaved;
+		return super.toString() + "\nRideDriver: \nnumOfRidesAsDriver " + numOfRidesAsDriver + ", \ntotalMoneySaved " + totalMoneySaved;
 	}
 	
 	

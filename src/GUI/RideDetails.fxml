@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CarpoolController">
+   <children>
+      <VBox prefHeight="332.0" prefWidth="341.0" spacing="15.0">
+         <children>
+            <Label text="Ride Details:" />
+            <VBox prefHeight="180.0" prefWidth="179.0" spacing="15.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label text="Source:" />
+                        <Label fx:id="sourceInput" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label text="Destination:" />
+                        <Label fx:id="destinationInput" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label text="Price per hitchhiker:" />
+                        <Label fx:id="hitchhikerPriceInput" />
+                     </children>
+                  </HBox>
+                  <VBox spacing="20.0">
+                     <children>
+                        <Label text="Car Details:" />
+                        <VBox prefHeight="200.0" prefWidth="100.0" />
+                     </children>
+                  </VBox>
+                  <HBox spacing="20.0">
+                     <children>
+                        <Label text="Driver's name:" />
+                        <Label fx:id="driverInput" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="20.0">
+                     <children>
+                        <Label text="Number of Hitchhikers:" />
+                        <Label fx:id="numHitchhikerInput" />
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

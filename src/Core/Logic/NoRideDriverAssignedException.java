@@ -1,7 +1,7 @@
-package Hitchhiker.side;
+package Core.Logic;
 
 /**
- * Hitchhiker.side.NoRideDriverAssignedException
+ * NoRideDriverAssignedException
  */
 public class NoRideDriverAssignedException extends Exception{
 

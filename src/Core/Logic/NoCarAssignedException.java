@@ -1,7 +1,7 @@
-package Hitchhiker.side;
+package Core.Logic;
 
 /**
- * Hitchhiker.side.NoCarAssignedException
+ * NoCarAssignedException
  */
 public class NoCarAssignedException extends Exception{
 

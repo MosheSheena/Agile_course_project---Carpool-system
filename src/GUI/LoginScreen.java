@@ -26,7 +26,8 @@ public class LoginScreen extends Application {
     }
 
     private void loadCarpoolFromDatabase() {
-
+        // TODO: 19/05/18
+        //load data from database into a static class so that it can be accessible via all classes
     }
 
 

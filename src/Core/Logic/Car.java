@@ -1,4 +1,4 @@
-package Hitchhiker.side;
+package Core.Logic;
 
 public class Car {
 
@@ -37,7 +37,7 @@ public class Car {
 	
 	@Override
 	public String toString() {
-		return "Hitchhiker.side.Car " + model + ", color " + color + ", numOfSeatsAvailable " + numOfSeatsAvailable
+		return "Car " + model + ", color " + color + ", numOfSeatsAvailable " + numOfSeatsAvailable
 				+ ", gasolineConsumptionPerKM " + gasolineConsumptionPerKM + ", registrationPlate " + registrationPlate;
 	}
 }

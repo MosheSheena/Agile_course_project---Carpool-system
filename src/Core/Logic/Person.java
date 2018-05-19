@@ -1,4 +1,4 @@
-package Hitchhiker.side;
+package Core.Logic;
 
 public class Person {
 
@@ -65,7 +65,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Hitchhiker.side.Person: \nid " + id + ", \nname " + name + " \naddress " + address + ", \ncity " + city + ", \nage " + age;
+		return "Person: \nid " + id + ", \nname " + name + " \naddress " + address + ", \ncity " + city + ", \nage " + age;
 	}
 	
 	

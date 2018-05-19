@@ -1,4 +1,4 @@
-package Hitchhiker.side;
+package Core.Logic;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +57,7 @@ public abstract class Commuter extends Person{
 
 	@Override
 	public String toString() {
-		return super.toString() + "\nHitchhiker.side.Commuter: \ncarsOwned " + carsOwned.toString() + " \nnumOfPlannedRides " + plannedRides.size() +
+		return super.toString() + "\nCommuter: \ncarsOwned " + carsOwned.toString() + " \nnumOfPlannedRides " + plannedRides.size() +
 		 " \nnumOfExecutedRides " + executedRides.size();
 	}
 	

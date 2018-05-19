@@ -1,6 +1,7 @@
-package Hitchhiker.side;
+package Core.Logic;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 public class Ride {
@@ -9,6 +10,8 @@ public class Ride {
 	 * Describes a planned ride or an actual ride
 	 */
 
+	private int rideID;
+	private static int idGenerator = 0;
 	private String destination;
 	private String source;
 	private int pricePerHitchhiker;
@@ -19,14 +22,17 @@ public class Ride {
 	private boolean executed;
 	
 	public Ride(String destination, String source) {
+	    rideID = ++idGenerator;
 		this.destination = destination;
 		this.source = source;
 		this.hitchhikers = new HashSet<>();
 		this.pricePerHitchhiker = calcPriceOfRide();
 		this.executed = false;
 	}
-	
-	/** begin of getters / setters */
+
+    /** begin of getters / setters */
+
+    public int getRideID() {return rideID;}
 
 	public String getDestination() {return destination;}
 
@@ -53,7 +59,7 @@ public class Ride {
 	public boolean isExecuted() {return executed;}
 
 	/* end of getters / setters
-	 @throws Hitchhiker.side.NoSeatAvailableInRideException*/
+	 @throws NoSeatAvailableInRideException*/
 
 	public void addHitchhiker(Hitchhiker hitchhiker) throws NoSeatAvailableInRideException {
 		if (getNumOfHichhikers() >= theCar.getNumOfSeatsAvailable())
@@ -100,9 +106,7 @@ public class Ride {
 
 	@Override
 	public String toString() {
-		return "Hitchhiker.side.Ride: \ndestination " + destination + ", \nsource " + source + ", \npricePerHitchhiker " + pricePerHitchhiker
-				+ ", \ntheCar " + theCar + ", \nrideDriver " + rideDriver + ", \nhitchhikers" + hitchhikers
-				+ ", \nmoneySavedFromRide " + moneySavedFromRide + ", \nexecuted " + executed;
+		return "Ride #" + rideID;
 	}
 
 	public boolean hasCommuter(Commuter commuter) {
@@ -123,6 +127,22 @@ public class Ride {
 		}
 		return hitchhikers.remove(commuter);
 	}
-	
-	
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ride ride = (Ride) o;
+        return rideID == ride.rideID;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(rideID);
+    }
+
+    public boolean hasRoom() {
+		return getNumOfHichhikers() < theCar.getNumOfSeatsAvailable();
+	}
 }

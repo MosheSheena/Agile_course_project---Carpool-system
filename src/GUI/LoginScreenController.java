@@ -37,22 +37,27 @@ public class LoginScreenController implements Initializable {
         //authentication logic
 
         //Assume login is good, we show the carpool window
-        Parent root = FXMLLoader.load(getClass().getResource("CarpoolScreen.fxml"));
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CarpoolScreen.fxml"));
+
+        Parent root = loader.load();
         Scene scene = new Scene(root);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
+        window.setTitle("Carpool");
         window.show();
+
     }
 
     @FXML
     void makeSignUp(ActionEvent event) {
-        //write new user to database
+        // TODO: 19/05/18 write new user to database
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //load database settings
+        // TODO: 19/05/18 load database settings
     }
 
 }

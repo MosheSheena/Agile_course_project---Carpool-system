@@ -1,4 +1,4 @@
-package Hitchhiker.side;
+package Core.Logic;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +42,8 @@ public class Carpool {
 		// and more
 		return true;
 	}
-	
+
+	/** param commuter is the creator of the ride */
 	public void registerRide(Ride ride, Commuter commuter) throws NoSeatAvailableInRideException {
 		ride.defaultRideAssignment(commuter);
 		commuter.addRide(ride);
@@ -71,27 +72,27 @@ public class Carpool {
 		if (!removedFromRide)
 			return false;
 		if(commuter instanceof RideDriver) {
-			// notify hitchhikers that a driver was assigned to their ride
+			// notify hitchhikers that a driver was removed from their ride
 		} else {
-			// ask driver's confirmation about the hitchhiker and send the response to the hitchhiker
+			// notify driver removed from ride
 		}
 		return commuter.removeRide(ride);
 	}
 	
 	public List<Ride> history() {
 		// do not allow outsiders to change history
-		return new ArrayList<Ride>(executedRides);
+		return new ArrayList<>(executedRides);
 	}
 	
-	public List<Ride> getAvaCarPools() {
-		List<Ride> avaPool = new ArrayList<Ride>(executedRides);
+	public List<Ride> getAvailableCarPools() {
+		List<Ride> availablePool = new ArrayList<>();
 		
 		for (Ride carInRide : this.plannedRides ) {
-			if (carInRide.getNumOfHichhikers() <= carInRide.getTheCar().getNumOfSeatsAvailable())
+			if (carInRide.hasRoom())
 				// Available seats and the car ready for ride
-				avaPool.add(carInRide);	
+				availablePool.add(carInRide);
 		}
-		return avaPool;
+		return availablePool;
 	}
 	
 }

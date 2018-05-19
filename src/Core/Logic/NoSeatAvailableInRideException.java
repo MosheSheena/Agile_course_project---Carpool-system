@@ -1,7 +1,7 @@
-package Hitchhiker.side;
+package Core.Logic;
 
 /**
- * Hitchhiker.side.NoSeatAvailableInRideException
+ * NoSeatAvailableInRideException
  */
 public class NoSeatAvailableInRideException extends Exception {
 

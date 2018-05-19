@@ -1,7 +1,7 @@
-package Hitchhiker.side;
+package Core.Logic;
 
 /**
- * Hitchhiker.side.RideNotExecutedException
+ * RideNotExecutedException
  */
 public class RideNotExecutedException extends Exception{
 
