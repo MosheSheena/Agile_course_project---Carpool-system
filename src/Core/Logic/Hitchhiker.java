@@ -5,8 +5,8 @@ public class Hitchhiker extends Commuter{
 	private int totalMoneySpent;
 	private int numRidesAsHitchhiker;
 	
-	public Hitchhiker(int id, String name, String address, int age, String city) {
-		super(id, name, address, age, city);
+	public Hitchhiker(int id, String name, String address, String city, int age) {
+		super(id, name, address, city, age);
 		this.totalMoneySpent = 0;
 		this.numRidesAsHitchhiker = 0;
 	}

@@ -9,8 +9,8 @@ public abstract class Commuter extends Person{
 	private List<Ride> executedRides;
 	private List<Ride> plannedRides;
 	
-	public Commuter(int id, String name, String address, int age, String city) {
-		super(id, name, address, age, city);
+	public Commuter(int id, String name, String address, String city, int age) {
+		super(id, name, address, city, age);
 		
 		this.carsOwned = new ArrayList<>();
 		this.executedRides = new ArrayList<>();

@@ -30,7 +30,7 @@ public class Carpool {
 	
 	public int getNumOfAvailableRides() { return plannedRides.size();}
 	
-	public boolean executeRide(Ride ride) {
+	public boolean executeRide(Ride ride) throws NoCarAssignedException, NoRideDriverAssignedException {
 		if (!plannedRides.contains(ride))
 			return false;
 		if(!ride.rideHasDriver())
@@ -39,14 +39,15 @@ public class Carpool {
 			return false;
 		executedRides.add(ride);
 		plannedRides.remove(ride);
+		ride.executeRide();
+
 		// and more
 		return true;
 	}
 
-	/** param commuter is the creator of the ride */
-	public void registerRide(Ride ride, Commuter commuter) throws NoSeatAvailableInRideException {
-		ride.defaultRideAssignment(commuter);
-		commuter.addRide(ride);
+	public void registerRide(Ride ride, Commuter creatorOfRide) throws NoSeatAvailableInRideException {
+		ride.defaultRideAssignment(creatorOfRide);
+        creatorOfRide.addRide(ride);
 		plannedRides.add(ride);
 		// and more
 	}

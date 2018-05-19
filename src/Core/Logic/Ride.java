@@ -67,9 +67,9 @@ public class Ride {
 		hitchhikers.add(hitchhiker);
 	}
 	
-	public void assignRideDriver(RideDriver carOwner, Car theCar) {
+	public void assignRideDriver(RideDriver carOwner) {
 		this.rideDriver = carOwner;
-		setTheCar(theCar);
+		setTheCar(carOwner.getDefaultCar());
 	}
 
 	public void removeRideDriver(RideDriver rideDriver) {
@@ -80,7 +80,7 @@ public class Ride {
 	// smart assignment to ride
 	public void defaultRideAssignment(Commuter commuter) throws NoSeatAvailableInRideException {
 		if (commuter instanceof RideDriver) {
-			assignRideDriver((RideDriver)commuter, commuter.getDefaultCar());
+			assignRideDriver((RideDriver)commuter);
 		}
 		else {// commuter is hitchhiker
 			addHitchhiker((Hitchhiker)commuter);
@@ -97,6 +97,14 @@ public class Ride {
 		if (theCar == null)
 			throw new NoCarAssignedException("cannot execute ride, no car assign");
 		executed = true;
+		try {
+			rideDriver.executeRide(this);
+			for(Hitchhiker h : hitchhikers) {
+				h.executeRide(this);
+			}
+		} catch (RideNotExecutedException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	private int calcPriceOfRide() {

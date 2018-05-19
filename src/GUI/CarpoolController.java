@@ -1,6 +1,8 @@
 package GUI;
 
+import Core.Logic.Car;
 import Core.Logic.Ride;
+import Core.Logic.RideDriver;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXRadioButton;
 import javafx.beans.value.ChangeListener;
@@ -50,18 +52,24 @@ public class CarpoolController implements Initializable {
     @FXML
     private Label numHitchhikerInput;
 
-    private ObservableList<Ride> rides = FXCollections.observableArrayList(new Ride("afeka", "modiin"), new Ride("holland", "israel"));
+    private ObservableList<Ride> rides = FXCollections.observableArrayList();
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // TODO: 19/05/18 load rides list with rides from database
+        Ride ride = new Ride("afeka", "modiin");
+        Ride ride2 = new Ride("holland", "israel");
+        Car testCar = new Car("mazda", "red", 3, 18.0, "1234-5");
+        RideDriver rideDriver = new RideDriver(1224, "moshe", "boten", "rosh aiin", 13, testCar);
+        ride.assignRideDriver(rideDriver);
+        ride2.assignRideDriver(rideDriver);
+        rides.add(ride);
+        rides.add(ride2);
         jfxListView.setItems(rides);
 
         //assign listener for the list
         jfxListView.getSelectionModel().selectedItemProperty().addListener((ChangeListener<Ride>) (observable, oldValue, newValue) -> {
-            // Your action here
-            System.out.println("Selected item: " + newValue);
             FXMLLoader loader = new FXMLLoader(getClass().getResource("RideDetails.fxml"));
             Parent root = null;
             try {
@@ -71,6 +79,7 @@ public class CarpoolController implements Initializable {
             }
 
             borderPane.setCenter(root);
+
             RideDetailsController rideDetailsController = loader.getController();
             rideDetailsController.setRideDetails(newValue.getSource(), newValue.getDestination(), newValue.getPricePerHitchhiker(),
                     newValue.getRideDriver().getName(), newValue.getNumOfHichhikers());
