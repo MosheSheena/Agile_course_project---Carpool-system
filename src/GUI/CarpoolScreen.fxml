@@ -40,12 +40,12 @@
    <bottom>
       <HBox prefHeight="32.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <JFXRadioButton fx:id="planned" selected="true" text="Planned">
+            <JFXRadioButton fx:id="plannedRadioButton" selected="true" text="Planned">
                <toggleGroup>
                   <ToggleGroup fx:id="rideToggleGroup" />
                </toggleGroup>
             </JFXRadioButton>
-            <JFXRadioButton fx:id="history" text="History" toggleGroup="$rideToggleGroup" />
+            <JFXRadioButton fx:id="historyRadioButton" text="History" toggleGroup="$rideToggleGroup" />
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

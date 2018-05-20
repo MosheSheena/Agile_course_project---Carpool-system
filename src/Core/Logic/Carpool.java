@@ -79,6 +79,14 @@ public class Carpool {
 		}
 		return commuter.removeRide(ride);
 	}
+
+	public boolean cancelRide(Ride ride) {
+        int index = plannedRides.indexOf(ride);
+	    if(index == -1) //not in planned rides
+	        return false;
+	    plannedRides.remove(index);
+	    return true;
+    }
 	
 	public List<Ride> history() {
 		// do not allow outsiders to change history

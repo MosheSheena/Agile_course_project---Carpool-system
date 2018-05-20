@@ -153,4 +153,8 @@ public class Ride {
     public boolean hasRoom() {
 		return getNumOfHichhikers() < theCar.getNumOfSeatsAvailable();
 	}
+
+	public boolean canBeExecuted() {
+	    return rideDriver != null && theCar != null && getNumOfHichhikers() > 0;
+    }
 }

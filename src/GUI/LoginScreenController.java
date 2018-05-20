@@ -51,8 +51,17 @@ public class LoginScreenController implements Initializable {
     }
 
     @FXML
-    void makeSignUp(ActionEvent event) {
+    void makeSignUp(ActionEvent event) throws IOException {
         // TODO: 19/05/18 write new user to database
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUpScreen.fxml"));
+
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.setTitle("Sign up");
+        window.show();
     }
 
     @Override
