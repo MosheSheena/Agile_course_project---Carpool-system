@@ -1,5 +1,6 @@
 package GUI;
 
+import Core.Logic.Person;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
@@ -70,7 +71,7 @@ public class SignUpScreenController implements Initializable {
     }
 
     @FXML
-    public void nextPressed(ActionEvent event) {
+    public void nextPressed(ActionEvent event) throws IOException {
         //check for fields
         boolean allFilled = true;
 
@@ -87,10 +88,27 @@ public class SignUpScreenController implements Initializable {
 
         if (allFilled) {
 
+            // TODO: 20/05/18 write to database
+            // TODO: 20/05/18 find a better way to force people to enter int and not string by mistake
+            Person p = new Person(Integer.parseInt(idInputField.getText()),
+                    nameInputField.getText(),
+                    addressInputField.getText(),
+                    cityInputField.getText(),
+                    Integer.parseInt(ageInputField.getText()));
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUpCarDetails.fxml"));
+
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.setTitle("Carpool");
+            window.show();
         }
     }
 
-    public void setValidators() {
+    private void setValidators() {
         RequiredFieldValidator validator = new RequiredFieldValidator();
         validator.setMessage("Input Required");
         validator.setIcon(GlyphsBuilder.create(FontAwesomeIconView.class)
