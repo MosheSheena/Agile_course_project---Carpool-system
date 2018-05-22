@@ -9,7 +9,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignUpScreenController">
    <center>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
@@ -31,7 +30,7 @@
          <children>
             <ImageView fx:id="signUpReturnLoginButton" fitHeight="24.0" fitWidth="24.0" onMousePressed="#returnLoginPressed" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/go-back-left-arrow_icon-icons.com_72738.png" />
+                  <Image url="@../go-back-left-arrow_icon-icons.com_72738.png" />
                </image>
             </ImageView>
             <Label text="Start by filling your info">

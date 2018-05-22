@@ -3,12 +3,14 @@ package GUI;
 import Core.Logic.Car;
 import Core.Logic.Ride;
 import Core.Logic.RideDriver;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXRadioButton;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -40,19 +42,7 @@ public class CarpoolController implements Initializable {
     private ToggleGroup rideToggleGroup;
 
     @FXML
-    private Label sourceInput;
-
-    @FXML
-    private Label destinationInput;
-
-    @FXML
-    private Label hitchhikerPriceInput;
-
-    @FXML
-    private Label driverInput;
-
-    @FXML
-    private Label numHitchhikerInput;
+    private JFXButton addRideButton;
 
     private ObservableList<Ride> plannedRides = FXCollections.observableArrayList();
 
@@ -104,5 +94,10 @@ public class CarpoolController implements Initializable {
                 jfxListView.setItems(historyRides);
             }
         });
+    }
+
+    @FXML
+    public void addRidePressed(ActionEvent event) {
+
     }
 }

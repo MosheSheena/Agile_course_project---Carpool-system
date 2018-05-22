@@ -34,7 +34,9 @@ public class LoginScreenController implements Initializable {
 
     @FXML
     void makeLogin(ActionEvent event) throws IOException {
-        //authentication logic
+        // TODO: 22-05-18  authentication logic
+        String usernameInput = username.getText();
+        String passInput = pass.getText();
 
         //Assume login is good, we show the carpool window
 

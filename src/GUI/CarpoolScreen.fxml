@@ -46,6 +46,11 @@
                </toggleGroup>
             </JFXRadioButton>
             <JFXRadioButton fx:id="historyRadioButton" text="History" toggleGroup="$rideToggleGroup" />
+            <JFXButton fx:id="addRideButton" onAction="#addRidePressed" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Add Ride" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="300.0" />
+               </HBox.margin>
+            </JFXButton>
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
