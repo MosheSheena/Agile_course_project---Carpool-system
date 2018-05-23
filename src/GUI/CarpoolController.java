@@ -3,22 +3,25 @@ package GUI;
 import Core.Logic.Car;
 import Core.Logic.Ride;
 import Core.Logic.RideDriver;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXListView;
-import com.jfoenix.controls.JFXRadioButton;
+import com.jfoenix.controls.*;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.control.Label;
-import javafx.scene.control.Toggle;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -44,6 +47,12 @@ public class CarpoolController implements Initializable {
     @FXML
     private JFXButton addRideButton;
 
+    @FXML
+    private MenuItem signOutMenuItem;
+
+    @FXML
+    private MenuBar mainMenuBar;
+
     private ObservableList<Ride> plannedRides = FXCollections.observableArrayList();
 
     private ObservableList<Ride> historyRides = FXCollections.observableArrayList();
@@ -62,6 +71,9 @@ public class CarpoolController implements Initializable {
         plannedRides.add(ride2);
 
         jfxListView.setItems(plannedRides);
+
+        plannedRadioButton.setSelectedColor(Color.web("2196F3"));
+        historyRadioButton.setSelectedColor(Color.web("2196F3"));
 
         //assign listener for the list
         jfxListView.getSelectionModel().selectedItemProperty().addListener((ChangeListener<Ride>) (observable, oldValue, newValue) -> {
@@ -97,7 +109,54 @@ public class CarpoolController implements Initializable {
     }
 
     @FXML
-    public void addRidePressed(ActionEvent event) {
+    public void addRidePressed(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("AddRideScreen.fxml"));
+
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage window;
+        window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.setTitle("Add Ride");
+        window.show();
+    }
+
+    @FXML
+    public void signOut(ActionEvent event) throws IOException {
+        // TODO: sign out from database - currentuser = null
+        FXMLLoader loader;
+        loader = new FXMLLoader(getClass().getResource("LoginScreen.fxml"));
+
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage window = (Stage)mainMenuBar.getScene().getWindow();
+        window.setScene(scene);
+        window.setTitle("Sign up");
+        window.show();
+    }
+
+    @FXML
+    public void about(ActionEvent event) {
+        StackPane stackPane = new StackPane();
+        borderPane.setCenter(stackPane);
+
+        JFXDialogLayout jfxDialogLayout = new JFXDialogLayout();
+        jfxDialogLayout.setHeading(new Text("About"));
+        jfxDialogLayout.setBody(new Text("Created by:\nAmit Levy, Moshe Sheena, Itay Ta'asiri, Tomer Spivak"));
+
+        JFXDialog jfxDialog = new JFXDialog(stackPane, jfxDialogLayout, JFXDialog.DialogTransition.CENTER);
+
+        JFXButton closeDialogButton = new JFXButton("Okay");
+
+        closeDialogButton.setOnAction((EventHandler<ActionEvent>) event1 -> jfxDialog.close());
+
+        jfxDialogLayout.setActions(closeDialogButton);
+
+        jfxDialog.show();
 
     }
+
 }

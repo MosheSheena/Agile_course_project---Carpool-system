@@ -37,10 +37,11 @@ public class RideDetailsController implements Initializable {
     @FXML
     private JFXButton executeRide;
 
-    private Ride choosenRide;
+    private Ride chosenRide;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
 
     }
 
@@ -49,7 +50,7 @@ public class RideDetailsController implements Initializable {
         // if user is the ride driver - allow to cancel drive
         // if ride has room - allow to join
         // if ride is allowed to be executed - allow execute
-        choosenRide = ride;
+        chosenRide = ride;
         // TODO: 20/05/18 see if the logged in user is the ride driver
         if(!ride.hasRoom())
             joinRide.setDisable(true);
@@ -69,26 +70,30 @@ public class RideDetailsController implements Initializable {
     public void joinPressed(ActionEvent event) {
         Carpool carpool = Carpool.getInstance();
         // TODO: 20/05/18 assign current user
-        //carpool.assignCommuterToRide('current user', choosenRide);
+        // TODO: 22-05-18 check for driver approval
+        // TODO: 23-05-18 bind to listener so we can know if ride status had change and notify accordingly
+        //carpool.assignCommuterToRide('current user', chosenRide);
     }
 
     @FXML
     public void leavePressed(ActionEvent event) {
         Carpool carpool = Carpool.getInstance();
         // TODO: 20/05/18 remove current user
-        //carpool.removeCommuterFromRide('current user', choosenRide);
+        // TODO: 22-05-18 notify ride drive or hitchhikers
+        //carpool.removeCommuterFromRide('current user', chosenRide);
     }
 
     @FXML
     public void executePressed(ActionEvent event) throws NoCarAssignedException, NoRideDriverAssignedException {
         Carpool carpool = Carpool.getInstance();
-        carpool.executeRide(choosenRide);
+        carpool.executeRide(chosenRide);
     }
 
     @FXML
     public void cancelPressed(ActionEvent event) {
         Carpool carpool = Carpool.getInstance();
-        carpool.cancelRide(choosenRide);
+        carpool.cancelRide(chosenRide);
+        // TODO: 22-05-18 notify all commuters
     }
 }
 

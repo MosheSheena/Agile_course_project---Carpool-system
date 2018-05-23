@@ -19,9 +19,6 @@ import javafx.stage.Stage;
 
 public class LoginScreenController implements Initializable {
 
-  
-    @FXML
-    private AnchorPane anchorPane;
 
     @FXML
     private JFXTextField username;
@@ -31,6 +28,9 @@ public class LoginScreenController implements Initializable {
 
     @FXML
     private JFXButton login;
+
+    @FXML
+    private JFXButton signUp;
 
     @FXML
     void makeLogin(ActionEvent event) throws IOException {

@@ -15,8 +15,8 @@
             <children>
                 <VBox alignment="CENTER" prefHeight="300.0" prefWidth="156.0" spacing="30.0">
                     <children>
-                        <JFXTextField fx:id="idInputField" focusColor="#2196f3" labelFloat="true" promptText="Destination" />
-                        <JFXTextField fx:id="nameInputField" focusColor="#2196f3" labelFloat="true" promptText="Source" />
+                        <JFXTextField fx:id="destinationInputField" focusColor="#2196f3" labelFloat="true" promptText="Destination" />
+                        <JFXTextField fx:id="sourceInputField" focusColor="#2196f3" labelFloat="true" promptText="Source" />
                     </children>
                 </VBox>
             </children>

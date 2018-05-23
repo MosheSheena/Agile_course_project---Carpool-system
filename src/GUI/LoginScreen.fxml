@@ -10,19 +10,16 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 
-<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="255.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginScreenController">
-   <children>
-   
-       <Pane layoutX="25.0" layoutY="20.0" prefHeight="216.0" prefWidth="377.0" style="-fx-background-color: #ffffff" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <children>
-              <JFXTextField fx:id="username" focusColor="#09b6bc" labelFloat="true" layoutX="76.0" layoutY="28.0" maxWidth="232.0" minWidth="232.0" prefHeight="40.0" prefWidth="232.0" promptText="Username" />
-              <JFXButton fx:id="login" buttonType="RAISED" defaultButton="true" layoutX="69.0" layoutY="156.0" onAction="#makeLogin" prefHeight="32.0" prefWidth="86.0" ripplerFill="WHITE" style="-fx-background-color: #2196F3" text="Login" textAlignment="CENTER" textFill="WHITE" />
-              <JFXButton fx:id="sign_up" buttonType="RAISED" cancelButton="true" layoutX="213.0" layoutY="156.0" onAction="#makeSignUp" prefHeight="32.0" prefWidth="86.0" ripplerFill="WHITE" style="-fx-background-color: #2196F3" text="Sign up" textAlignment="CENTER" textFill="WHITE" />
-              <JFXPasswordField fx:id="pass" focusColor="#09b6bc" labelFloat="true" layoutX="76.0" layoutY="84.0" maxWidth="232.0" minWidth="214.0" prefHeight="40.0" prefWidth="232.0" promptText="Password" />
-      </children>
-   
-   
-       </Pane>
-   </children>
 
-</AnchorPane>
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="30.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginScreenController">
+   <children>
+      <JFXTextField fx:id="username" focusColor="#09b6bc" labelFloat="true" maxWidth="232.0" minWidth="232.0" prefHeight="40.0" prefWidth="232.0" promptText="Username" />
+      <JFXPasswordField fx:id="pass" focusColor="#09b6bc" labelFloat="true" maxWidth="232.0" minWidth="214.0" prefHeight="40.0" prefWidth="232.0" promptText="Password" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <JFXButton fx:id="login" buttonType="RAISED" defaultButton="true" onAction="#makeLogin" prefHeight="32.0" prefWidth="86.0" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Login" textAlignment="CENTER" textFill="WHITE" />
+            <JFXButton fx:id="signUp" buttonType="RAISED" cancelButton="true" onAction="#makeSignUp" prefHeight="32.0" prefWidth="86.0" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Sign up" textAlignment="CENTER" textFill="WHITE" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
