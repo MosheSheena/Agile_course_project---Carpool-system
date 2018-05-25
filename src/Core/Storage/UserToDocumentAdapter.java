@@ -14,8 +14,7 @@ public class UserToDocumentAdapter extends ObjectToDocumentAdapter {
     public Document adaptToDocument() {
         Document personDoc = personToDocumentAdapter(u.getPerson());
 
-        return new Document("id_", u.hashCode()).
-                append("userName", u.getUserName()).
+        return new Document("username", u.getUserName()).
                 append("password", u.getPassword()).
                 append("personalDetails", personDoc);
     }
