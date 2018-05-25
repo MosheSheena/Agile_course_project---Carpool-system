@@ -1,5 +1,6 @@
 package Core.Storage;
 
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
@@ -22,6 +23,11 @@ public class CollectionHandler {
     public <T> Document loadDocument(String fieldName, T queryValue) {
         return collection.find(Filters.eq
                 (fieldName, queryValue)).first();
+    }
+
+    public <T> FindIterable<Document> loadDocuments
+            (String fieldName, T queryValue) {
+        return collection.find(Filters.eq(fieldName, queryValue));
     }
 
     public <T> void updateDocument

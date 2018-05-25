@@ -42,7 +42,6 @@ public class RideToDocumentAdapter extends ObjectToDocumentAdapter {
                 append("registrationPlate", c.getRegistrationPlate());
     }
 
-
     private Document rideDriverToDocumentAdapter(RideDriver rd) {
         return new Document("numOfRidesAsDriver", rd.getNumOfRidesAsDriver()).
                 append("totalMoneySaved", rd.getTotalMoneySaved());

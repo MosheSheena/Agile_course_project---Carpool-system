@@ -1,6 +1,7 @@
 package Core.Storage;
 
 import Core.Logic.Person;
+import com.google.gson.Gson;
 import org.bson.Document;
 
 public class UserToDocumentAdapter extends ObjectToDocumentAdapter {

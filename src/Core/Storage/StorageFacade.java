@@ -1,6 +1,7 @@
 package Core.Storage;
 
 import Core.Logic.Ride;
+import com.mongodb.client.FindIterable;
 import org.bson.Document;
 
 public class StorageFacade {
@@ -60,8 +61,8 @@ public class StorageFacade {
      * @throws DBConnectionDownException
      * @throws DocumentNotFoundException
      */
-    public boolean existsUser(String username) throws DBConnectionDownException,
-            DocumentNotFoundException {
+    public boolean existsUser(String username)
+            throws DBConnectionDownException, DocumentNotFoundException {
         testDBConnectivity();
 
         CollectionHandler ch = new CollectionHandler 
@@ -74,7 +75,8 @@ public class StorageFacade {
         return true;
     }
 
-    public void saveNewRide(Document newRide) throws DBConnectionDownException {
+    public void saveNewRide(Document newRide)
+            throws DBConnectionDownException {
         testDBConnectivity();
 
         CollectionHandler ch = new CollectionHandler
@@ -82,7 +84,20 @@ public class StorageFacade {
         ch.writeDocument(newRide);
     }
 
-    public void updateRideStatusToExecuted(Ride r) throws DBConnectionDownException {
+    public FindIterable<Document> loadAllUnexecutedRides() {
+        CollectionHandler ch = new CollectionHandler
+                (connection.getMongoDatabase(), RIDES_COLLECTION);
+        return ch.loadDocuments("executed", false);
+    }
+
+    public FindIterable<Document> loadRideHistory() {
+        CollectionHandler ch = new CollectionHandler
+                (connection.getMongoDatabase(), RIDES_COLLECTION);
+        return ch.loadDocuments("executed", true);
+    }
+
+    public void updateRideStatusToExecuted(Ride r)
+            throws DBConnectionDownException {
         testDBConnectivity();
 
         CollectionHandler ch = new CollectionHandler
