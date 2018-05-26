@@ -16,6 +16,14 @@ public class Person {
 		this.age = age;
 		this.city = city;
 	}
+
+	public Person(Person p) {
+        id = p.getId();
+        name = p.getName();
+        address = p.getAddress();
+        age = p.getAge();
+        city = p.getCity();
+	}
 	
 	/** begin of getters / setters */
 	
