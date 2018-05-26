@@ -18,7 +18,7 @@ public class User implements Serializable {
         setSerialForUser();
         setUserName(userName);
         setPassword(password);
-
+        this.person = person;
     }
 
     public Long getUserIdentifier() {

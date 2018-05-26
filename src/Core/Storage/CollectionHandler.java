@@ -30,6 +30,10 @@ public class CollectionHandler {
         return collection.find(Filters.eq(fieldName, queryValue));
     }
 
+    public FindIterable<Document> loadAllDocuments() {
+        return collection.find();
+    }
+
     public <T> void updateDocument
             (String fieldName, T oldValue, T newValue) {
         collection.updateOne(Filters.eq

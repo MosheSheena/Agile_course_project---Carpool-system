@@ -2,9 +2,12 @@ package Core.Logic;
 
 import Core.Storage.*;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.mongodb.client.FindIterable;
 import org.bson.Document;
 
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,38 +23,82 @@ public class LogicFacade {
     private LogicFacade() {}
 
     public boolean checkIfUserExists(String username)
-            throws DBConnectionDownException, DocumentNotFoundException {
-        return sf.existsUser(username);
+            throws DocumentNotFoundException {
+        sf.openConnection();
+        boolean res = sf.existsUser(username);
+        sf.closeConnection();
+        return res;
     }
 
-    public void registerNewUser(User u) throws DBConnectionDownException {
-        Document userDoc = new UserToDocumentAdapter(u).adaptToDocument();
+    public void registerNewUser(User u) throws DocumentNotFoundException {
+
+//        Document userDoc = new UserToDocumentAdapter(u).adaptToDocument();
+        Document userDoc = Adapters.userToDocAdapter(u);
+        if(checkIfUserExists(u.getUserName()))
+            return;
+
+        sf.openConnection();
         sf.registerNewUser(userDoc);
+        sf.closeConnection();
+    }
+
+    public void registerNewRide(Ride r) {
+        sf.openConnection();
+
+        sf.saveNewRide(Adapters.rideToDocAdapter(r));
+
+        sf.closeConnection();
     }
 
     public Set<Ride> loadAllUnexecutedRides() {
-        FindIterable<Document> unexecutedRides = sf.loadAllUnexecutedRides();
+        sf.openConnection();
+        Set<Ride> unexecutedRides = new HashSet<>();
 
-        Set<Ride> returnValue = new HashSet<>();
-        Gson gs = new Gson();
+        FindIterable<Document> unExecutedRidesDocs = sf.loadAllUnexecutedRides();
 
-        for (Document d: unexecutedRides) {
-            Ride r = gs.fromJson(d.toJson(), Ride.class);
-            returnValue.add(r);
+        for(Document d: unExecutedRidesDocs) {
+            Ride r = Adapters.docToRideAdapter(d);
+            if(!r.isExecuted())
+                unexecutedRides.add(r);
         }
-        return returnValue;
+
+        sf.closeConnection();
+        return unexecutedRides;
     }
 
     public Set<Ride> loadRideHistory() {
-        FindIterable<Document> unexecutedRides = sf.loadRideHistory();
+        sf.openConnection();
+        Set<Ride> rideHistory = new HashSet<>();
 
-        Set<Ride> returnValue = new HashSet<>();
-        Gson gs = new Gson();
+        FindIterable<Document> allRidesDocs = sf.loadAllUnexecutedRides();
 
-        for (Document d: unexecutedRides) {
-            Ride r = gs.fromJson(d.toJson(), Ride.class);
-            returnValue.add(r);
+        for(Document d: allRidesDocs) {
+            Ride r = Adapters.docToRideAdapter(d);
+            if(r.isExecuted())
+                rideHistory.add(r);
         }
-        return returnValue;
+
+        sf.closeConnection();
+        return rideHistory;
+    }
+
+    public void changeRideStatusToExecuted(Ride r)
+            throws NoRideDriverAssignedException, DocumentNotFoundException,
+            NoCarAssignedException {
+
+        sf.openConnection();
+
+        sf.updateRideStatusToExecuted(r);
+
+        sf.closeConnection();
+    }
+
+    public void updateRide(Ride currentRide, Ride newRide)
+            throws DocumentNotFoundException {
+        sf.openConnection();
+
+        sf.updateRideDetails(currentRide, newRide);
+
+        sf.closeConnection();
     }
 }
