@@ -40,8 +40,7 @@ public class StorageFacade {
         ch.writeDocument(newUser);
     }
 
-    public boolean existsUser(String username)
-            throws DocumentNotFoundException {
+    public boolean existsUser(String username) {
         testDBConnectivity();
 
         CollectionHandler ch = new CollectionHandler 

@@ -22,24 +22,23 @@ public class LogicFacade {
 
     private LogicFacade() {}
 
-    public boolean checkIfUserExists(String username)
-            throws DocumentNotFoundException {
+    public boolean checkIfUserExists(String username) {
         sf.openConnection();
         boolean res = sf.existsUser(username);
         sf.closeConnection();
         return res;
     }
 
-    public void registerNewUser(User u) throws DocumentNotFoundException {
+    public boolean registerNewUser(User u) {
 
-//        Document userDoc = new UserToDocumentAdapter(u).adaptToDocument();
         Document userDoc = Adapters.userToDocAdapter(u);
         if(checkIfUserExists(u.getUserName()))
-            return;
+            return false;
 
         sf.openConnection();
         sf.registerNewUser(userDoc);
         sf.closeConnection();
+        return true;
     }
 
     public void registerNewRide(Ride r) {

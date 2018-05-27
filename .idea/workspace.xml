@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dff8a6c3-e1fa-4f17-beda-b114679a8dcc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Core/Logic/UserNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Logic/LogicFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Logic/LogicFacade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Storage/StorageFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Storage/StorageFacade.java" afterDir="false" />
@@ -25,60 +24,13 @@
       <file leaf-file-name="LogicFacade.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Core/Logic/LogicFacade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="1337">
+              <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
               <folding>
-                <element signature="method#checkIfUserExists#0;class#LogicFacade#0" />
                 <element signature="method#registerNewUser#0;class#LogicFacade#0" />
-                <element signature="method#registerNewRide#0;class#LogicFacade#0" />
-                <element signature="method#loadAllUnexecutedRides#0;class#LogicFacade#0" />
-                <element signature="method#loadRideHistory#0;class#LogicFacade#0" />
                 <element signature="method#changeRideStatusToExecuted#0;class#LogicFacade#0" />
                 <element signature="method#updateRide#0;class#LogicFacade#0" />
-                <element signature="method#getLoggedUser#0;class#LogicFacade#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserNotFoundException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Core/Logic/UserNotFoundException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-              <folding>
-                <element signature="e#170#171#0" expanded="true" />
-                <element signature="e#200#201#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StorageFacade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Core/Storage/StorageFacade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
-              <folding>
-                <element signature="method#openConnection#0;class#StorageFacade#0" />
-                <element signature="method#registerNewUser#0;class#StorageFacade#0" />
-                <element signature="method#existsUser#0;class#StorageFacade#0" />
-                <element signature="method#loadAllUsers#0;class#StorageFacade#0" />
-                <element signature="method#saveNewRide#0;class#StorageFacade#0" />
-                <element signature="method#loadAllUnexecutedRides#0;class#StorageFacade#0" />
-                <element signature="method#loadRideHistory#0;class#StorageFacade#0" />
-                <element signature="method#updateRideStatusToExecuted#0;class#StorageFacade#0" />
-                <element signature="method#updateRideDetails#0;class#StorageFacade#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/MainGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -472,7 +424,7 @@
       <workItem from="1527090213238" duration="7545000" />
       <workItem from="1527229652432" duration="17301000" />
       <workItem from="1527320474836" duration="17184000" />
-      <workItem from="1527440555015" duration="1228000" />
+      <workItem from="1527440555015" duration="3193000" />
     </task>
     <task id="LOCAL-00001" summary="basic GUI with hooks for the database">
       <created>1526673117178</created>
@@ -544,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527350738552</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added function getLoggedUser(String username), which returns a User object representing the currently logged user.&#10;This function can replace checkIfUserExists(String username) becasue it uses it to determine if the user exists in the database.">
+      <created>1527442038138</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1527442038138</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -580,7 +539,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101546000" />
+    <option name="totallyTimeSpent" value="103511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="724" extended-state="0" />
@@ -667,7 +626,8 @@
     <MESSAGE value="Reconfigured some classes" />
     <MESSAGE value="Finished implementing (I think so..).&#10;Need to add unit tests." />
     <MESSAGE value="Finished providing Logic Facade with Storage Facade that supports it." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished providing Logic Facade with Storage Facade that supports it." />
+    <MESSAGE value="Added function getLoggedUser(String username), which returns a User object representing the currently logged user.&#10;This function can replace checkIfUserExists(String username) becasue it uses it to determine if the user exists in the database." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added function getLoggedUser(String username), which returns a User object representing the currently logged user.&#10;This function can replace checkIfUserExists(String username) becasue it uses it to determine if the user exists in the database." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -947,13 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/Storage/CollectionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Storage/Adapters.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -993,12 +946,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Storage/StorageFacade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+        <state relative-caret-position="279">
+          <caret line="48" column="64" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="64" />
           <folding>
             <element signature="method#openConnection#0;class#StorageFacade#0" />
             <element signature="method#registerNewUser#0;class#StorageFacade#0" />
-            <element signature="method#existsUser#0;class#StorageFacade#0" />
             <element signature="method#loadAllUsers#0;class#StorageFacade#0" />
             <element signature="method#saveNewRide#0;class#StorageFacade#0" />
             <element signature="method#loadAllUnexecutedRides#0;class#StorageFacade#0" />
@@ -1009,19 +961,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/CollectionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding>
+            <element signature="method#CollectionHandler#0;class#CollectionHandler#0" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="method#loadDocument#0;class#CollectionHandler#0" />
+            <element signature="method#loadDocuments#0;class#CollectionHandler#0" />
+            <element signature="method#updateDocument#0;class#CollectionHandler#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Logic/LogicFacade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="1337">
+          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
           <folding>
-            <element signature="method#checkIfUserExists#0;class#LogicFacade#0" />
             <element signature="method#registerNewUser#0;class#LogicFacade#0" />
-            <element signature="method#registerNewRide#0;class#LogicFacade#0" />
-            <element signature="method#loadAllUnexecutedRides#0;class#LogicFacade#0" />
-            <element signature="method#loadRideHistory#0;class#LogicFacade#0" />
             <element signature="method#changeRideStatusToExecuted#0;class#LogicFacade#0" />
             <element signature="method#updateRide#0;class#LogicFacade#0" />
-            <element signature="method#getLoggedUser#0;class#LogicFacade#0" />
           </folding>
         </state>
       </provider>
