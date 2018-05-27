@@ -101,4 +101,25 @@ public class LogicFacade {
 
         sf.closeConnection();
     }
+
+    public User getLoggedUser(String username)
+            throws UserNotFoundException, DocumentNotFoundException {
+        if(!checkIfUserExists(username))
+            throw new UserNotFoundException("No user with that name");
+
+        sf.openConnection();
+
+        FindIterable<Document> allUsers = sf.loadAllUsers();
+
+        for(Document d: allUsers) {
+            User u = Adapters.docToUserAdapter(d);
+            if(u.getUserName().equals(username)) {
+                return u;
+            }
+        }
+
+        sf.closeConnection();
+
+        return null;
+    }
 }

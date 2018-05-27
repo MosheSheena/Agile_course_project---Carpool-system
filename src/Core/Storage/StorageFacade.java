@@ -40,7 +40,6 @@ public class StorageFacade {
         ch.writeDocument(newUser);
     }
 
-
     public boolean existsUser(String username)
             throws DocumentNotFoundException {
         testDBConnectivity();
@@ -58,6 +57,12 @@ public class StorageFacade {
         }
 
         return false;
+    }
+
+    public FindIterable<Document> loadAllUsers() {
+        CollectionHandler ch = new CollectionHandler
+                (connection.getMongoDatabase(), USERS_COLLECTION);
+        return ch.loadAllDocuments();
     }
 
     public void saveNewRide(Document newRide) {
