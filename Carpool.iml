@@ -10,15 +10,6 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/jfoenix-8.0.4.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="module-library" scope="TEST">
       <library name="JUnit4">
         <CLASSES>
@@ -43,19 +34,24 @@
         <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/gson-2.8.5.jar!/" />
         </CLASSES>
-        <JAVADOC>
-          <root url="jar://$USER_HOME$/Downloads/gson-2.8.5-javadoc.jar!/" />
-        </JAVADOC>
+        <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/jfoenix-8.0.4.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES />
         <JAVADOC>
-          <root url="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3-javadoc.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3-javadoc (1).jar!/" />
         </JAVADOC>
         <SOURCES />
       </library>

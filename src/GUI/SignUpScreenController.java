@@ -88,7 +88,6 @@ public class SignUpScreenController implements Initializable {
 
         if (allFilled) {
 
-            // TODO: 20/05/18 write to database
             // TODO: 20/05/18 find a better way to force people to enter int and not string by mistake
             Person p = new Person(Integer.parseInt(idInputField.getText()),
                     nameInputField.getText(),

@@ -1,6 +1,7 @@
 package GUI;
 
 import Core.Logic.Carpool;
+import Core.Logic.LogicFacade;
 import Core.Logic.Ride;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -48,11 +49,13 @@ public class AddRideScreenController implements Initializable {
 
     @FXML
     public void addPressed(ActionEvent event) throws IOException {
-        // TODO: 22-05-18 write new ride to database
         // TODO: 22-05-18 get user
         Carpool carpool = Carpool.getInstance();
         Ride r = new Ride(destinationInputField.getText(), sourceInputField.getText());
         //carpool.registerRide(r, getUser());
+
+        LogicFacade logicFacade = LogicFacade.getInstance();
+        logicFacade.registerNewRide(r);
 
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("CarpoolScreen.fxml"));

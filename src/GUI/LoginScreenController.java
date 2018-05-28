@@ -1,5 +1,6 @@
 package GUI;
 
+import Core.Logic.LogicFacade;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -14,7 +15,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class LoginScreenController implements Initializable {
@@ -34,9 +34,11 @@ public class LoginScreenController implements Initializable {
 
     @FXML
     void makeLogin(ActionEvent event) throws IOException {
-        // TODO: 22-05-18  authentication logic
         String usernameInput = username.getText();
         String passInput = pass.getText();
+
+        LogicFacade logicFacade = LogicFacade.getInstance();
+        logicFacade.checkIfUserExists(usernameInput);
 
         //Assume login is good, we show the carpool window
 
@@ -54,7 +56,7 @@ public class LoginScreenController implements Initializable {
 
     @FXML
     void makeSignUp(ActionEvent event) throws IOException {
-        // TODO: 19/05/18 write new user to database
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUpScreen.fxml"));
 
         Parent root = loader.load();

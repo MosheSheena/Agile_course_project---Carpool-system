@@ -80,7 +80,6 @@ public class SignUpCarDetailsController implements Initializable {
         if (!regPlateInputField.validate())
             allFilled = false;
 
-        // TODO: 20/05/18 write car to database
         // TODO: 20/05/18 find a way to related car to person from previous screen and user from next screen
         Car c = new Car(modelInputField.getText(), colorInputField.getText(),
                 Integer.parseInt(seatsInputField.getText()),

@@ -1,6 +1,7 @@
 package GUI;
 
 import Core.Logic.Car;
+import Core.Logic.LogicFacade;
 import Core.Logic.Ride;
 import Core.Logic.RideDriver;
 import com.jfoenix.controls.*;
@@ -25,7 +26,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 public class CarpoolController implements Initializable {
 
@@ -59,9 +62,14 @@ public class CarpoolController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // TODO: 19/05/18 load plannedRides list with plannedRadioButton rides from database
+        LogicFacade logicFacade = LogicFacade.getInstance();
 
-        Ride ride = new Ride("afeka", "modiin");
+        Set<Ride> plannedridesDB = logicFacade.loadAllUnexecutedRides();
+        Set<Ride> historyDB = logicFacade.loadRideHistory();
+        plannedRides.addAll(plannedridesDB);
+        historyRides.addAll(historyDB);
+
+       /* Ride ride = new Ride("afeka", "modiin");
         Ride ride2 = new Ride("holland", "israel");
         Car testCar = new Car("mazda", "red", 3, 18.0, "1234-5");
         RideDriver rideDriver = new RideDriver(1224, "moshe", "boten", "rosh aiin", 13, testCar);
@@ -70,7 +78,7 @@ public class CarpoolController implements Initializable {
         plannedRides.add(ride);
         plannedRides.add(ride2);
 
-        jfxListView.setItems(plannedRides);
+        jfxListView.setItems(plannedRides);*/
 
         plannedRadioButton.setSelectedColor(Color.web("2196F3"));
         historyRadioButton.setSelectedColor(Color.web("2196F3"));
