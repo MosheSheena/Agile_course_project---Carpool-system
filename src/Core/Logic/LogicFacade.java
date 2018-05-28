@@ -22,24 +22,23 @@ public class LogicFacade {
 
     private LogicFacade() {}
 
-    public boolean checkIfUserExists(String username)
-            throws DocumentNotFoundException {
+    public boolean checkIfUserExists(String username) {
         sf.openConnection();
         boolean res = sf.existsUser(username);
         sf.closeConnection();
         return res;
     }
 
-    public void registerNewUser(User u) throws DocumentNotFoundException {
+    public boolean registerNewUser(User u) {
 
-//        Document userDoc = new UserToDocumentAdapter(u).adaptToDocument();
         Document userDoc = Adapters.userToDocAdapter(u);
         if(checkIfUserExists(u.getUserName()))
-            return;
+            return false;
 
         sf.openConnection();
         sf.registerNewUser(userDoc);
         sf.closeConnection();
+        return true;
     }
 
     public void registerNewRide(Ride r) {
@@ -100,5 +99,26 @@ public class LogicFacade {
         sf.updateRideDetails(currentRide, newRide);
 
         sf.closeConnection();
+    }
+
+    public User getLoggedUser(String username)
+            throws UserNotFoundException, DocumentNotFoundException {
+        if(!checkIfUserExists(username))
+            throw new UserNotFoundException("No user with that name");
+
+        sf.openConnection();
+
+        FindIterable<Document> allUsers = sf.loadAllUsers();
+
+        for(Document d: allUsers) {
+            User u = Adapters.docToUserAdapter(d);
+            if(u.getUserName().equals(username)) {
+                return u;
+            }
+        }
+
+        sf.closeConnection();
+
+        return null;
     }
 }
