@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignUpCarDetailsController">
+    <center>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="300.0" prefWidth="156.0" spacing="30.0">
+                    <children>
+                        <JFXTextField fx:id="modelInputField" focusColor="#2196f3" labelFloat="true" promptText="Model" />
+                        <JFXTextField fx:id="colorInputField" focusColor="#2196f3" labelFloat="true" promptText="Color" />
+                        <JFXTextField fx:id="seatsInputField" focusColor="#2196f3" labelFloat="true" promptText="Seats available" />
+                        <JFXTextField fx:id="gasPerKMInput" focusColor="#2196f3" labelFloat="true" promptText="Gasoline per KM" />
+                        <JFXTextField fx:id="regPlateInputField" focusColor="#2196f3" labelFloat="true" promptText="Registration plate" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="TOP_LEFT">
+            <children>
+                <ImageView fx:id="signUpReturnBasicInfoButton" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#returnToBasicInfo" onMousePressed="#returnToBasicInfo" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../go-back-left-arrow_icon-icons.com_72738.png" />
+                    </image>
+                </ImageView>
+                <Label prefHeight="15.0" prefWidth="386.0" text="Fill your car details or skip">
+                    <padding>
+                        <Insets left="200.0" />
+                    </padding>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <JFXButton fx:id="signUpInfoSkipButton" onAction="#goToUserPassScreen" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Skip" textFill="WHITE" />
+            <JFXButton fx:id="signUpInfoNextButton" onAction="#nextPressed" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Next" textFill="WHITE" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+    </bottom>
+</BorderPane>

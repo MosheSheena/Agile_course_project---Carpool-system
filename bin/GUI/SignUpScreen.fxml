@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignUpScreenController">
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="300.0" prefWidth="156.0" spacing="30.0">
+               <children>
+                  <JFXTextField fx:id="idInputField" focusColor="#2196f3" labelFloat="true" promptText="ID" />
+                  <JFXTextField fx:id="nameInputField" focusColor="#2196f3" labelFloat="true" promptText="Full Name" />
+                  <JFXTextField fx:id="addressInputField" focusColor="#2196f3" labelFloat="true" promptText="Address" />
+                  <JFXTextField fx:id="cityInputField" focusColor="#2196f3" labelFloat="true" promptText="City" />
+                  <JFXTextField fx:id="ageInputField" focusColor="#2196f3" labelFloat="true" promptText="Age" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <ImageView fx:id="signUpReturnLoginButton" fitHeight="24.0" fitWidth="24.0" onMousePressed="#returnLoginPressed" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../go-back-left-arrow_icon-icons.com_72738.png" />
+               </image>
+            </ImageView>
+            <Label text="Start by filling your info">
+               <padding>
+                  <Insets left="200.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="signUpInfoNext" onAction="#nextPressed" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Next" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>

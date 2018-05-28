@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="30.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginScreenController">
+   <children>
+      <JFXTextField fx:id="username" focusColor="#09b6bc" labelFloat="true" maxWidth="232.0" minWidth="232.0" prefHeight="40.0" prefWidth="232.0" promptText="Username" />
+      <JFXPasswordField fx:id="pass" focusColor="#09b6bc" labelFloat="true" maxWidth="232.0" minWidth="214.0" prefHeight="40.0" prefWidth="232.0" promptText="Password" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <JFXButton fx:id="login" buttonType="RAISED" defaultButton="true" onAction="#makeLogin" prefHeight="32.0" prefWidth="86.0" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Login" textAlignment="CENTER" textFill="WHITE" />
+            <JFXButton fx:id="signUp" buttonType="RAISED" cancelButton="true" onAction="#makeSignUp" prefHeight="32.0" prefWidth="86.0" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Sign up" textAlignment="CENTER" textFill="WHITE" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
