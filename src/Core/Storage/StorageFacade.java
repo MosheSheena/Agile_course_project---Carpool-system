@@ -12,6 +12,7 @@ import org.bson.types.ObjectId;
 public class StorageFacade {
 
     private MongoConnection connection;
+    private MongoCredentials credentials;
 
     private final String USERS_COLLECTION = "users";
     private final String RIDES_COLLECTION = "rides";
@@ -23,9 +24,19 @@ public class StorageFacade {
 
     private StorageFacade() {}
 
-    public void openConnection() {
+    public void provideCredentials(String hostname, int portnum, String dbname) {
+        credentials = new MongoCredentials(hostname, portnum, dbname);
+    }
+
+    public void openConnection(String hostname, int portnum, String dbname) {
         //connection = new MongoConnection(credentials);
-        connection = new MongoConnection("localhost", 27017, "agile");
+        connection = new MongoConnection(hostname, portnum, dbname);
+    }
+
+    public void openConnection() {
+        connection = new MongoConnection
+                (credentials.getHostName(), credentials.getPortNum(),
+                        credentials.getDbName());
     }
 
     public void closeConnection() {

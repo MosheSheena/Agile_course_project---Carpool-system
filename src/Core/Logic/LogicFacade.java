@@ -20,13 +20,19 @@ public class LogicFacade {
 
     private static StorageFacade sf = StorageFacade.getInstance();
 
-    private LogicFacade() {}
+    private LogicFacade() {
+        sf.provideCredentials("localhost", 27017, "agile");
+    }
 
     public boolean checkIfUserExists(String username) {
         sf.openConnection();
         boolean res = sf.existsUser(username);
         sf.closeConnection();
         return res;
+    }
+
+    public void setServerCredentials(String hostname, int portnum, String dbname) {
+        sf.provideCredentials(hostname, portnum, dbname);
     }
 
     public boolean registerNewUser(User u) {
