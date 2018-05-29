@@ -45,9 +45,14 @@ public class Carpool {
 		return true;
 	}
 
-	public void registerRide(Ride ride, Commuter creatorOfRide) throws NoSeatAvailableInRideException {
-		ride.defaultRideAssignment(creatorOfRide);
-        creatorOfRide.addRide(ride);
+	public void registerRide(Ride ride, Commuter creatorOfRide)  {
+		try {
+			ride.defaultRideAssignment(creatorOfRide);
+		} catch (NoSeatAvailableInRideException e) {
+			e.printStackTrace();
+			System.out.println("we should not get here");
+		}
+		creatorOfRide.addRide(ride);
 		plannedRides.add(ride);
 		// and more
 	}

@@ -9,6 +9,13 @@ public class Hitchhiker extends Commuter{
 		super(id, name, address, city, age);
 		this.totalMoneySpent = 0;
 		this.numRidesAsHitchhiker = 0;
+
+	}
+
+	public Hitchhiker(Person person) {
+		super(person.getId(), person.getName(), person.getAddress(), person.getCity(), person.getAge());
+		this.totalMoneySpent = 0;
+		this.numRidesAsHitchhiker = 0;
 	}
 
 	public int getTotalMoneySpent() {return totalMoneySpent;}

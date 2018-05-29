@@ -133,7 +133,6 @@ public class CarpoolController implements Initializable {
 
     @FXML
     public void signOut(ActionEvent event) throws IOException {
-        // TODO: sign out from database - currentuser = null
         FXMLLoader loader;
         loader = new FXMLLoader(getClass().getResource("LoginScreen.fxml"));
 

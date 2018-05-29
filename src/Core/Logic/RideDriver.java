@@ -16,6 +16,12 @@ public class RideDriver extends Commuter{
 		this.totalMoneySaved = 0;
 	}
 
+	public RideDriver(Person person) {
+		super(person.getId(), person.getName(), person.getAddress(), person.getCity(), person.getAge());
+		this.numOfRidesAsDriver = 0;
+		this.totalMoneySaved = 0;
+	}
+
 	/**start of getters / setters */
 
 	public int getNumOfRidesAsDriver() {return numOfRidesAsDriver;}
@@ -27,11 +33,6 @@ public class RideDriver extends Commuter{
 	public void setTotalMoneySaved(int totalMoneySaved) {this.totalMoneySaved = totalMoneySaved;}
 
 	/**end of getters / setters */
-
-	public boolean verifyHitchhiker(Hitchhiker hitchhiker) {
-		return true;
-		//TODO - implement with gui?
-	}
 
 	@Override
 	public String toString() {

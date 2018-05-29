@@ -1,5 +1,6 @@
 package GUI;
 
+import Core.Logic.CurrentUserDetail;
 import Core.Logic.Person;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
@@ -94,6 +95,9 @@ public class SignUpScreenController implements Initializable {
                     addressInputField.getText(),
                     cityInputField.getText(),
                     Integer.parseInt(ageInputField.getText()));
+
+            CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
+            currentUserDetail.setPerson(p);
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUpCarDetails.fxml"));
 

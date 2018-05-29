@@ -1,6 +1,10 @@
 package GUI;
 
+import Core.Logic.CurrentUserDetail;
 import Core.Logic.LogicFacade;
+import Core.Logic.UserNotFoundException;
+import Core.Storage.DocumentNotFoundException;
+import Core.Storage.User;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -38,20 +42,42 @@ public class LoginScreenController implements Initializable {
         String passInput = pass.getText();
 
         LogicFacade logicFacade = LogicFacade.getInstance();
-        logicFacade.checkIfUserExists(usernameInput);
+        boolean userExists = logicFacade.checkIfUserExists(usernameInput);
 
-        //Assume login is good, we show the carpool window
+        if (userExists) {
+            try {
+                User user = logicFacade.getLoggedUser(usernameInput);
+                CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
+                currentUserDetail.setUsername(usernameInput);
+                currentUserDetail.setPassword(passInput);
+                currentUserDetail.setPerson(user.getPerson());
+            } catch (UserNotFoundException e) {
+                showNoUserFoundDialog();
+            } catch (DocumentNotFoundException e) {
+                e.printStackTrace();
+            }
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("CarpoolScreen.fxml"));
 
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
+            //Assume login is good, we show the carpool window
 
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.setTitle("Carpool");
-        window.show();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("CarpoolScreen.fxml"));
 
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.setTitle("Carpool");
+            window.show();
+        }
+        else {
+            showNoUserFoundDialog();
+        }
+
+    }
+
+    private void showNoUserFoundDialog() {
+        // TODO: 29-05-18 show dialog that no user was found
     }
 
     @FXML

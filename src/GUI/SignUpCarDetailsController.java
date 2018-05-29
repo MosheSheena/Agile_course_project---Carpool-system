@@ -1,6 +1,9 @@
 package GUI;
 
 import Core.Logic.Car;
+import Core.Logic.CurrentUserDetail;
+import Core.Logic.Hitchhiker;
+import Core.Logic.RideDriver;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
@@ -52,7 +55,14 @@ public class SignUpCarDetailsController implements Initializable {
     private JFXTextField colorInputField;
 
     @FXML
-    public void goToUserPassScreen(ActionEvent event) throws IOException {
+    public void skipPressed(ActionEvent event) throws IOException {
+        CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
+        Hitchhiker hitchhiker = new Hitchhiker(currentUserDetail.getPerson());
+        currentUserDetail.setUserRole(hitchhiker);
+        goToUserPassScreen(event);
+    }
+
+    private void goToUserPassScreen(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUpUserPass.fxml"));
 
         Parent root = loader.load();
@@ -80,13 +90,16 @@ public class SignUpCarDetailsController implements Initializable {
         if (!regPlateInputField.validate())
             allFilled = false;
 
-        // TODO: 20/05/18 find a way to related car to person from previous screen and user from next screen
-        Car c = new Car(modelInputField.getText(), colorInputField.getText(),
-                Integer.parseInt(seatsInputField.getText()),
-                Double.parseDouble(gasPerKMInput.getText()),
-                regPlateInputField.getText());
 
         if (allFilled) {
+            Car c = new Car(modelInputField.getText(), colorInputField.getText(),
+                    Integer.parseInt(seatsInputField.getText()),
+                    Double.parseDouble(gasPerKMInput.getText()),
+                    regPlateInputField.getText());
+            CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
+            RideDriver rideDriver = new RideDriver(currentUserDetail.getPerson());
+            rideDriver.addCar(c);
+            currentUserDetail.setUserRole(rideDriver);
             goToUserPassScreen(event);
         }
     }

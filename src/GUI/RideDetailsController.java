@@ -2,6 +2,7 @@ package GUI;
 
 
 import Core.Logic.*;
+import Core.Storage.User;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -51,7 +52,9 @@ public class RideDetailsController implements Initializable {
         // if ride has room - allow to join
         // if ride is allowed to be executed - allow execute
         chosenRide = ride;
-        // TODO: 20/05/18 see if the logged in user is the ride driver
+       CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
+       if (!(currentUserDetail.getUserRole() instanceof RideDriver))
+           cancelRide.setDisable(true);
         if(!ride.hasRoom())
             joinRide.setDisable(true);
         if(!ride.canBeExecuted())
@@ -69,18 +72,26 @@ public class RideDetailsController implements Initializable {
     @FXML
     public void joinPressed(ActionEvent event) {
         Carpool carpool = Carpool.getInstance();
-        // TODO: 20/05/18 assign current user
-        // TODO: 22-05-18 check for driver approval
+        CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
+        Commuter commuter = currentUserDetail.getUserRole();
+        try {
+            carpool.assignCommuterToRide(commuter, chosenRide);
+        } catch (NoSeatAvailableInRideException e) {
+            showNoSeatAvailableDialog();
+        }
         // TODO: 23-05-18 bind to listener so we can know if ride status had change and notify accordingly
-        //carpool.assignCommuterToRide('current user', chosenRide);
+    }
+
+    private void showNoSeatAvailableDialog() {
+        // TODO: 29-05-18 show no seat dialog
     }
 
     @FXML
     public void leavePressed(ActionEvent event) {
         Carpool carpool = Carpool.getInstance();
-        // TODO: 20/05/18 remove current user
+        CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
+        carpool.removeCommuterFromRide(currentUserDetail.getUserRole(), chosenRide);
         // TODO: 22-05-18 notify ride drive or hitchhikers
-        //carpool.removeCommuterFromRide('current user', chosenRide);
     }
 
     @FXML

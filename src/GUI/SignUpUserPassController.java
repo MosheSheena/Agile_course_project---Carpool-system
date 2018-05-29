@@ -1,5 +1,6 @@
 package GUI;
 
+import Core.Logic.CurrentUserDetail;
 import Core.Logic.LogicFacade;
 import Core.Storage.User;
 import com.jfoenix.controls.JFXButton;
@@ -54,9 +55,10 @@ public class SignUpUserPassController implements Initializable {
 
         if (allFilled) {
 
-            // TODO: 19/05/18 write new user to database
+            CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
+
             LogicFacade logicFacade = LogicFacade.getInstance();
-            logicFacade.registerNewUser(new User(signUpUsernameInput.getText(), signUpPasswordInput.getText()));
+            logicFacade.registerNewUser(new User(signUpUsernameInput.getText(), signUpPasswordInput.getText(), currentUserDetail.getPerson()));
 
             FXMLLoader loader;
             loader = new FXMLLoader(getClass().getResource("CarpoolScreen.fxml"));
@@ -91,7 +93,6 @@ public class SignUpUserPassController implements Initializable {
 
 
     private void setValidators() {
-        int i = 0;
         RequiredFieldValidator validator;
         validator = new RequiredFieldValidator();
         validator.setMessage("Input Required");
