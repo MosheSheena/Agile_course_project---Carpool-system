@@ -43,11 +43,9 @@ public class CarpoolTest {
     public void executeRideWithNoDriver() throws NoCarAssignedException, NoRideDriverAssignedException {
         Ride ride = new Ride("hi", "bye");
         assertFalse(carpool.executeRide(ride));
-        try {
-            carpool.registerRide(ride, testDriver);
-        } catch (NoSeatAvailableInRideException noSeatAvailableInRideException) {
-            noSeatAvailableInRideException.printStackTrace();
-        }
+
+        carpool.registerRide(ride, testDriver);
+
         assertFalse(carpool.executeRide(ride));
         ride.assignRideDriver(testDriver);
         assertFalse(carpool.executeRide(ride));
