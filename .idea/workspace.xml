@@ -1,50 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dff8a6c3-e1fa-4f17-beda-b114679a8dcc" name="Default" comment="GUI is done, maybe make more colorful">
-      <change afterPath="$PROJECT_DIR$/src/Core/Logic/CurrentUserDetail.java" afterDir="false" />
+    <list default="true" id="dff8a6c3-e1fa-4f17-beda-b114679a8dcc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Carpool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Carpool.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/Carpool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/Commuter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/Hitchhiker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/LogicFacade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/NoCarAssignedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/NoRideDriverAssignedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/NoSeatAvailableInRideException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/Ride.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/RideDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Logic/RideNotExecutedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Storage/Adapters.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Storage/CollectionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Storage/DocumentNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Storage/MongoConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Storage/MongoCredentials.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Storage/StorageFacade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Core/Storage/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/AddRideScreenController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/CarpoolController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/LoginScreenController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/MainGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/RideDetailsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/SignUpCarDetailsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/SignUpScreenController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/SignUpUserPassController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Logic/Carpool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Logic/Carpool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Logic/Hitchhiker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Logic/Hitchhiker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Logic/RideDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Logic/RideDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AddRideScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AddRideScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CarpoolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CarpoolController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/CarpoolTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/CarpoolTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/SignUpCarDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GUI/SignUpCarDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/LoginScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/LoginScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/RideDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/RideDetails.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/RideDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/RideDetailsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SignUpCarDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SignUpCarDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SignUpCarDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SignUpCarDetailsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SignUpScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SignUpScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SignUpUserPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SignUpUserPassController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,20 +25,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginScreenController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginScreenController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreenController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="98" column="11" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
+            <state relative-caret-position="240">
+              <caret line="98" column="54" lean-forward="true" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RideDetailsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/RideDetailsController.java">
+      <file leaf-file-name="LoginScreen.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreen.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="149">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarpoolController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/CarpoolController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="164" column="25" lean-forward="true" selection-start-line="149" selection-start-column="8" selection-end-line="164" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignUpScreenController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/SignUpScreenController.java">
+      <file leaf-file-name="RideDetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/RideDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="93" column="45" lean-forward="true" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
+            <state relative-caret-position="-862">
+              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,19 +70,31 @@
       </file>
       <file leaf-file-name="RideDetails.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/RideDetails.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+            <state relative-caret-position="170">
+              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SignUpScreenController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/SignUpScreenController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1173">
+              <caret line="93" column="45" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/MainGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+            <state relative-caret-position="155">
+              <caret line="74" column="11" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,23 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddRideScreenController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/AddRideScreenController.java">
+      <file leaf-file-name="CarpoolTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CarpoolTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Carpool.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Core/Logic/Carpool.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+            <state relative-caret-position="765">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -140,7 +114,7 @@
       <file leaf-file-name="Ride.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Core/Logic/Ride.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="1802">
               <caret line="110" column="11" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="11" />
             </state>
           </provider>
@@ -149,17 +123,8 @@
       <file leaf-file-name="RideDriver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Core/Logic/RideDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="578">
               <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogicFacade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Core/Logic/LogicFacade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -192,8 +157,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="moshesheena &lt;moshesheena@gmail.com&gt;" />
         <option value="amitlevy21 &lt;amitlevy347@gmail.com&gt;" />
+        <option value="moshesheena &lt;moshesheena@gmail.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -213,7 +178,6 @@
         <option value="$PROJECT_DIR$/src/GUI/RideDetails.fxml" />
         <option value="$PROJECT_DIR$/src/Core/Logic/Commuter.java" />
         <option value="$PROJECT_DIR$/tests/RideTest.java" />
-        <option value="$PROJECT_DIR$/tests/CarpoolTest.java" />
         <option value="$PROJECT_DIR$/src/Core/Logic/Ride.java" />
         <option value="$PROJECT_DIR$/src/GUI/SignUpScreen.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/SignUpCarDetails.fxml" />
@@ -253,11 +217,12 @@
         <option value="$PROJECT_DIR$/src/GUI/SignUpUserPassController.java" />
         <option value="$PROJECT_DIR$/src/Core/Logic/Carpool.java" />
         <option value="$PROJECT_DIR$/src/GUI/AddRideScreenController.java" />
-        <option value="$PROJECT_DIR$/src/GUI/LoginScreenController.java" />
         <option value="$PROJECT_DIR$/src/Core/Logic/RideDriver.java" />
-        <option value="$PROJECT_DIR$/src/GUI/RideDetailsController.java" />
         <option value="$PROJECT_DIR$/src/GUI/SignUpScreenController.java" />
         <option value="$PROJECT_DIR$/src/GUI/MainGUI.java" />
+        <option value="$PROJECT_DIR$/tests/CarpoolTest.java" />
+        <option value="$PROJECT_DIR$/src/GUI/RideDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/GUI/LoginScreenController.java" />
       </list>
     </option>
   </component>
@@ -325,9 +290,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -538,7 +503,8 @@
       <workItem from="1527358627816" duration="27000" />
       <workItem from="1527437604192" duration="2200000" />
       <workItem from="1527520172471" duration="248000" />
-      <workItem from="1527602832058" duration="3877000" />
+      <workItem from="1527602832058" duration="4556000" />
+      <workItem from="1527613060528" duration="1620000" />
     </task>
     <task id="LOCAL-00001" summary="basic GUI with hooks for the database">
       <created>1526673117178</created>
@@ -603,7 +569,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527267319414</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="backend integration with frontend maybe done">
+      <created>1527609267585</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1527609267585</updated>
+    </task>
+    <task id="LOCAL-00011" summary="small fix - compilation error">
+      <created>1527609846255</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1527609846255</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -639,7 +619,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106328000" />
+    <option name="totallyTimeSpent" value="108627000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -652,10 +632,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32673267" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -663,11 +643,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22923078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22772278" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4938575" visible="true" weight="0.20574887" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4938575" visible="true" weight="0.20877458" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3276923" />
       <window_info id="Structure" order="1" sideWeight="0.5061425" side_tool="true" weight="0.20574887" />
@@ -677,7 +657,6 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39846155" />
       <window_info anchor="right" id="Mongo Explorer" order="4" weight="0.2109375" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3276923" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -688,18 +667,18 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20985691" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3290938" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21010248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20985691" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -712,8 +691,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3290938" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info id="Favorites" order="6" side_tool="true" />
     </layout-to-restore>
@@ -734,7 +713,9 @@
     <MESSAGE value="Added new classes to Storage package.&#10;Started implementing the StorageFacade.&#10;Added some exception classes." />
     <MESSAGE value="Reconfigured some classes" />
     <MESSAGE value="Finished implementing (I think so..).&#10;Need to add unit tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished implementing (I think so..).&#10;Need to add unit tests." />
+    <MESSAGE value="backend integration with frontend maybe done" />
+    <MESSAGE value="small fix - compilation error" />
+    <option name="LAST_COMMIT_MESSAGE" value="small fix - compilation error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -767,13 +748,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="174" selection-start-line="174" selection-end-line="174" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -882,41 +856,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreen.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Storage/CurrentUserDetails.java" />
     <entry file="file://$PROJECT_DIR$/src/Core/Storage/Session.java" />
     <entry file="file://$PROJECT_DIR$/src/Core/Storage/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#1053#1054#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/CarpoolScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="86" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/CarpoolController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -924,26 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
-          <folding>
-            <element signature="e#320#321#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#908#909#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -958,9 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="102" column="38" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
-          <folding>
-            <element signature="method#setValidators#0;class#SignUpCarDetailsController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -974,28 +904,20 @@
     <entry file="file://$PROJECT_DIR$/src/Core/Logic/LogicFacade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/RideDetails.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Logic/Carpool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="867">
           <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/AddRideScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
+        <state relative-caret-position="578">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1005,52 +927,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Logic/RideDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="578">
           <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Logic/Ride.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="1802">
           <caret line="110" column="11" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="98" column="11" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/RideDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/SignUpScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="93" column="45" lean-forward="true" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
+        <state relative-caret-position="1173">
+          <caret line="93" column="45" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/MainGUI.java">
+    <entry file="file://$PROJECT_DIR$/tests/CarpoolTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+        <state relative-caret-position="765">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/CarpoolController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="164" column="25" lean-forward="true" selection-start-line="149" selection-start-column="8" selection-end-line="164" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/RideDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/MainGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="74" column="11" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/RideDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-862">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="98" column="54" lean-forward="true" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="54" />
         </state>
       </provider>
     </entry>

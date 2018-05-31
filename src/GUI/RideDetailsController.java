@@ -4,15 +4,24 @@ package GUI;
 import Core.Logic.*;
 import Core.Storage.User;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class RideDetailsController implements Initializable {
+
+    @FXML
+    public BorderPane borderPane;
 
     @FXML
     private Label sourceInput;
@@ -57,7 +66,7 @@ public class RideDetailsController implements Initializable {
            cancelRide.setDisable(true);
         if(!ride.hasRoom())
             joinRide.setDisable(true);
-        if(!ride.canBeExecuted())
+        if(!ride.canBeExecuted() || !(currentUserDetail.getUserRole() instanceof RideDriver))
             executeRide.setDisable(true);
     }
 
@@ -83,7 +92,23 @@ public class RideDetailsController implements Initializable {
     }
 
     private void showNoSeatAvailableDialog() {
-        // TODO: 29-05-18 show no seat dialog
+        StackPane stackPane;
+        stackPane = new StackPane();
+        borderPane.setCenter(stackPane);
+
+        JFXDialogLayout jfxDialogLayout = new JFXDialogLayout();
+        jfxDialogLayout.setHeading(new Text("No room in ride"));
+        jfxDialogLayout.setBody(new Text("Sorry, you cannot join the ride. Reason - no room"));
+
+        JFXDialog jfxDialog = new JFXDialog(stackPane, jfxDialogLayout, JFXDialog.DialogTransition.CENTER);
+
+        JFXButton closeDialogButton = new JFXButton("Okay");
+
+        closeDialogButton.setOnAction((EventHandler<ActionEvent>) event1 -> jfxDialog.close());
+
+        jfxDialogLayout.setActions(closeDialogButton);
+
+        jfxDialog.show();
     }
 
     @FXML

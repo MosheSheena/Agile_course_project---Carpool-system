@@ -5,24 +5,28 @@ import Core.Logic.LogicFacade;
 import Core.Logic.UserNotFoundException;
 import Core.Storage.DocumentNotFoundException;
 import Core.Storage.User;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.*;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class LoginScreenController implements Initializable {
 
+    @FXML
+    public BorderPane borderPane;
 
     @FXML
     private JFXTextField username;
@@ -50,6 +54,7 @@ public class LoginScreenController implements Initializable {
                 CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
                 currentUserDetail.setUsername(usernameInput);
                 currentUserDetail.setPassword(passInput);
+                // person can be a hitchhiker or a rideDriver
                 currentUserDetail.setPerson(user.getPerson());
             } catch (UserNotFoundException e) {
                 showNoUserFoundDialog();
@@ -78,6 +83,22 @@ public class LoginScreenController implements Initializable {
 
     private void showNoUserFoundDialog() {
         // TODO: 29-05-18 show dialog that no user was found
+        StackPane stackPane = new StackPane();
+        borderPane.setCenter(stackPane);
+
+        JFXDialogLayout jfxDialogLayout = new JFXDialogLayout();
+        jfxDialogLayout.setHeading(new Text("No user found"));
+        jfxDialogLayout.setBody(new Text("No such user"));
+
+        JFXDialog jfxDialog = new JFXDialog(stackPane, jfxDialogLayout, JFXDialog.DialogTransition.CENTER);
+
+        JFXButton closeDialogButton = new JFXButton("Okay");
+
+        closeDialogButton.setOnAction((EventHandler<ActionEvent>) event1 -> jfxDialog.close());
+
+        jfxDialogLayout.setActions(closeDialogButton);
+
+        jfxDialog.show();
     }
 
     @FXML
