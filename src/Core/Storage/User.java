@@ -1,5 +1,6 @@
 package Core.Storage;
 
+import Core.Logic.Commuter;
 import Core.Logic.Person;
 
 import java.io.Serializable;
@@ -12,13 +13,13 @@ public class User implements Serializable {
     private Long userIdentifier;
     private String userName;
     private String password;
-    private Person person;
+    private Commuter commuter;
 
-    public User(String userName, String password, Person person) {
+    public User(String userName, String password, Commuter commuter) {
         setSerialForUser();
         setUserName(userName);
         setPassword(password);
-        this.person = person;
+        this.commuter = commuter;
     }
 
     public Long getUserIdentifier() {
@@ -26,7 +27,7 @@ public class User implements Serializable {
     }
 
     private void setSerialForUser() {
-        userIdentifier =  serialNum++;
+        userIdentifier = serialNum++;
     }
 
     public String getUserName() {
@@ -45,12 +46,12 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public Person getPerson() {
-        return new Person(person);
+    public Commuter getCommuter() {
+        return commuter;
     }
 
-    public void setPerson(Person person) {
-        this.person = person;
+    public void setCommuter(Commuter commuter) {
+        this.commuter = commuter;
     }
 
     @Override
@@ -66,11 +67,17 @@ public class User implements Serializable {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
         User user = (User) o;
-        return Objects.equals(getUserName(), user.getUserName());
+        return Objects.equals(getUserIdentifier(), user.getUserIdentifier()) &&
+                Objects.equals(getUserName(), user.getUserName()) &&
+                Objects.equals(getPassword(), user.getPassword()) &&
+                Objects.equals(getCommuter(), user.getCommuter());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(person.getId());
+
+        return Objects.hash(getUserIdentifier(), getUserName(), getPassword());
     }
 }
+
+
