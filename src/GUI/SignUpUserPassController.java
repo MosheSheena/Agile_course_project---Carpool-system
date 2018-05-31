@@ -1,8 +1,8 @@
 package GUI;
 
+import Core.Logic.Commuter;
 import Core.Logic.CurrentUserDetail;
 import Core.Logic.LogicFacade;
-import Core.Logic.Person;
 import Core.Storage.User;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
@@ -59,8 +59,8 @@ public class SignUpUserPassController implements Initializable {
             CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
 
             LogicFacade logicFacade = LogicFacade.getInstance();
-            Person p = currentUserDetail.getUserRole();
-            logicFacade.registerNewUser(new User(signUpUsernameInput.getText(), signUpPasswordInput.getText(), p));
+            Commuter commuter = currentUserDetail.getUserRole();
+            logicFacade.registerNewUser(new User(signUpUsernameInput.getText(), signUpPasswordInput.getText(), commuter));
 
             currentUserDetail.setUsername(signUpUsernameInput.getText());
             currentUserDetail.setPassword(signUpPasswordInput.getText());

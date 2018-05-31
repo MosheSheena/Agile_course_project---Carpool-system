@@ -34,7 +34,7 @@ public class RideTest {
 
         ride.addHitchhiker(hitchhiker);
         ride.addHitchhiker(hitchhiker2);
-        assertEquals(ride.getNumOfHichhikers(), 1);
+        assertEquals(ride.getNumOfHitchhikers(), 1);
     }
 
 

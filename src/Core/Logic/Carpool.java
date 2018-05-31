@@ -35,7 +35,7 @@ public class Carpool {
 			return false;
 		if(!ride.rideHasDriver())
 			return false;
-		if(ride.getNumOfHichhikers() == 0)
+		if(ride.getNumOfHitchhikers() == 0)
 			return false;
 		executedRides.add(ride);
 		plannedRides.remove(ride);

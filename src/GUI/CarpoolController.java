@@ -1,12 +1,9 @@
 package GUI;
 
-import Core.Logic.Car;
 import Core.Logic.LogicFacade;
 import Core.Logic.Ride;
-import Core.Logic.RideDriver;
 import com.jfoenix.controls.*;
 import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,7 +15,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -27,7 +23,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
 
@@ -65,9 +60,9 @@ public class CarpoolController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         LogicFacade logicFacade = LogicFacade.getInstance();
 
-        Set<Ride> plannedridesDB = logicFacade.loadAllUnexecutedRides();
+        Set<Ride> plannedRidesDB = logicFacade.loadAllUnexecutedRides();
         Set<Ride> historyDB = logicFacade.loadRideHistory();
-        plannedRides.addAll(plannedridesDB);
+        plannedRides.addAll(plannedRidesDB);
         historyRides.addAll(historyDB);
 
        /* Ride ride = new Ride("afeka", "modiin");
@@ -98,7 +93,7 @@ public class CarpoolController implements Initializable {
             // if list is empty we might have null value in newValue
             if(newValue != null) {
                 rideDetailsController.setRideDetails(newValue.getSource(), newValue.getDestination(), newValue.getPricePerHitchhiker(),
-                        newValue.getRideDriver().getName(), newValue.getNumOfHichhikers());
+                        newValue.getRideDriver().getName(), newValue.getNumOfHitchhikers());
                 rideDetailsController.initButtons(newValue);
 
                 borderPane.setCenter(root);

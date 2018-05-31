@@ -55,7 +55,7 @@ public class LoginScreenController implements Initializable {
                 currentUserDetail.setUsername(usernameInput);
                 currentUserDetail.setPassword(passInput);
                 // person can be a hitchhiker or a rideDriver
-                currentUserDetail.setPerson(user.getPerson());
+                currentUserDetail.setUserRole(user.getCommuter());
             } catch (UserNotFoundException e) {
                 showNoUserFoundDialog();
             } catch (DocumentNotFoundException e) {
