@@ -30,7 +30,7 @@
             <children>
                 <ImageView fx:id="signUpReturnBasicInfoButton" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#returnToBasicInfo" onMousePressed="#returnToBasicInfo" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../go-back-left-arrow_icon-icons.com_72738.png" />
+                        <Image url="@../go-back-left-arrow.png" />
                     </image>
                 </ImageView>
                 <Label prefHeight="15.0" prefWidth="386.0" text="Fill your car details or skip">

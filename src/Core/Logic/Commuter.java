@@ -16,6 +16,10 @@ public abstract class Commuter extends Person{
 		this.executedRides = new ArrayList<>();
 		this.plannedRides = new ArrayList<>();
 	}
+
+	public Commuter(Person p) {
+	    super(p.getId(), p.getName(), p.getAddress(), p.getCity(), p.getAge());
+    }
 	
 	/** begin of getters */
 

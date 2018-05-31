@@ -18,9 +18,10 @@ public class LogicFacade {
         return ourInstance;
     }
 
-    private static StorageFacade sf = StorageFacade.getInstance();
+    private static StorageFacade sf;
 
     private LogicFacade() {
+        sf = StorageFacade.getInstance();
         sf.provideCredentials("localhost", 27017, "agile");
     }
 

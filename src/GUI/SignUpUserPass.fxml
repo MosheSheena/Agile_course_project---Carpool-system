@@ -27,7 +27,7 @@
             <children>
                 <ImageView fx:id="signUpReturnCarDetailButton" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#returnCarDetail" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../go-back-left-arrow_icon-icons.com_72738.png" />
+                        <Image url="@../go-back-left-arrow.png" />
                     </image>
                 </ImageView>
                 <Label prefHeight="15.0" prefWidth="278.0" text="Last Step!">

@@ -82,8 +82,8 @@ public class LoginScreenController implements Initializable {
     }
 
     private void showNoUserFoundDialog() {
-        // TODO: 29-05-18 show dialog that no user was found
         StackPane stackPane = new StackPane();
+        Node previousNode = borderPane.getCenter();
         borderPane.setCenter(stackPane);
 
         JFXDialogLayout jfxDialogLayout = new JFXDialogLayout();
@@ -94,7 +94,10 @@ public class LoginScreenController implements Initializable {
 
         JFXButton closeDialogButton = new JFXButton("Okay");
 
-        closeDialogButton.setOnAction((EventHandler<ActionEvent>) event1 -> jfxDialog.close());
+        closeDialogButton.setOnAction((EventHandler<ActionEvent>) event1 -> {
+            jfxDialog.close();
+            borderPane.setCenter(previousNode);
+        });
 
         jfxDialogLayout.setActions(closeDialogButton);
 
@@ -117,7 +120,6 @@ public class LoginScreenController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO: 19/05/18 load database settings
     }
 
 }

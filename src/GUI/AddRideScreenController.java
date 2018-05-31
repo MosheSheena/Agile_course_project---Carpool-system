@@ -1,10 +1,9 @@
 package GUI;
 
-import Core.Logic.Carpool;
-import Core.Logic.CurrentUserDetail;
-import Core.Logic.LogicFacade;
-import Core.Logic.Ride;
+import Core.Logic.*;
 import Core.Storage.User;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class AddRideScreenController implements Initializable {
@@ -29,10 +29,17 @@ public class AddRideScreenController implements Initializable {
     public JFXTextField destinationInputField;
     @FXML
     public JFXTextField sourceInputField;
+    @FXML
+    public JFXButton addRideButton;
+    @FXML
+    public JFXComboBox<Car> chooseCarCB;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
 
+        List<Car> carsOwned = currentUserDetail.getUserRole().getCarsOwned();
+        chooseCarCB.getItems().addAll(carsOwned);
     }
 
     @FXML
@@ -61,6 +68,7 @@ public class AddRideScreenController implements Initializable {
         carpool.registerRide(r, currentUserDetail.getUserRole());
 
 
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("CarpoolScreen.fxml"));
 
         Parent root = loader.load();
@@ -70,5 +78,10 @@ public class AddRideScreenController implements Initializable {
         window.setScene(scene);
         window.setTitle("Carpool");
         window.show();
+    }
+
+    public void choosedCar(ActionEvent event) {
+        Car c = chooseCarCB.getSelectionModel().getSelectedItem();
+
     }
 }

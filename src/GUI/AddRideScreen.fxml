@@ -17,6 +17,7 @@
                     <children>
                         <JFXTextField fx:id="destinationInputField" focusColor="#2196f3" labelFloat="true" promptText="Destination" />
                         <JFXTextField fx:id="sourceInputField" focusColor="#2196f3" labelFloat="true" promptText="Source" />
+                  <JFXComboBox fx:id="chooseCarCB" focusColor="#2196f3" onAction="#choosedCar" promptText="Choose Car" />
                     </children>
                 </VBox>
             </children>
@@ -27,7 +28,7 @@
             <children>
                 <ImageView fx:id="returnCarpoolScreen" fitHeight="24.0" fitWidth="24.0" onMousePressed="#returnCarpoolPressed" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../go-back-left-arrow_icon-icons.com_72738.png" />
+                        <Image url="@../go-back-left-arrow.png" />
                     </image>
                 </ImageView>
                 <Label text="Enter Ride Details">

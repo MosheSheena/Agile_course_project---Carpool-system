@@ -18,6 +18,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -76,9 +77,9 @@ public class CarpoolController implements Initializable {
         ride.assignRideDriver(rideDriver);
         ride2.assignRideDriver(rideDriver);
         plannedRides.add(ride);
-        plannedRides.add(ride2);
+        plannedRides.add(ride2);*/
 
-        jfxListView.setItems(plannedRides);*/
+        jfxListView.setItems(plannedRides);
 
         plannedRadioButton.setSelectedColor(Color.web("2196F3"));
         historyRadioButton.setSelectedColor(Color.web("2196F3"));
@@ -109,9 +110,11 @@ public class CarpoolController implements Initializable {
         rideToggleGroup.selectedToggleProperty().addListener((ChangeListener<Toggle>) (observableValue, oldToggle, newToggle) -> {
             if(newToggle == plannedRadioButton) {
                 jfxListView.setItems(plannedRides);
+                jfxListView.refresh();
             }
             if(newToggle == historyRadioButton) {
                 jfxListView.setItems(historyRides);
+                jfxListView.refresh();
             }
         });
     }
@@ -148,6 +151,7 @@ public class CarpoolController implements Initializable {
     @FXML
     public void about(ActionEvent event) {
         StackPane stackPane = new StackPane();
+        Node previousNode = borderPane.getCenter();
         borderPane.setCenter(stackPane);
 
         JFXDialogLayout jfxDialogLayout = new JFXDialogLayout();
@@ -158,7 +162,10 @@ public class CarpoolController implements Initializable {
 
         JFXButton closeDialogButton = new JFXButton("Okay");
 
-        closeDialogButton.setOnAction((EventHandler<ActionEvent>) event1 -> jfxDialog.close());
+        closeDialogButton.setOnAction((EventHandler<ActionEvent>) event1 -> {
+            jfxDialog.close();
+            borderPane.setCenter(previousNode);
+        });
 
         jfxDialogLayout.setActions(closeDialogButton);
 
