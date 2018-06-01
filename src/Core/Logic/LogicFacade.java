@@ -128,4 +128,21 @@ public class LogicFacade {
 
         return null;
     }
+
+    public <T> void saveRideIdGenKey(T rideIdGenKey) {
+        sf.openConnection();
+
+        sf.saveRideIdGeneralKey(new Document("rideIdGenKey", rideIdGenKey));
+
+        sf.closeConnection();
+    }
+
+    public <T> T loadRideIdGenKey() {
+        sf.openConnection();
+
+        T genKey = (T) sf.loadRideIdGeneralKey().get("rideIdGenKey");
+
+        sf.closeConnection();
+        return genKey;
+    }
 }

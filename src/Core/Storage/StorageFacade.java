@@ -16,6 +16,7 @@ public class StorageFacade {
 
     private final String USERS_COLLECTION = "users";
     private final String RIDES_COLLECTION = "rides";
+    private final String KEY_COLLECTION   = "keys";
 
     private static StorageFacade ourInstance = new StorageFacade();
     public static StorageFacade getInstance() {
@@ -136,4 +137,16 @@ public class StorageFacade {
     }
 
     public void testDBConnectivity() {}
+
+    public void saveRideIdGeneralKey(Document rideIdDoc) {
+        CollectionHandler ch = new CollectionHandler
+                (connection.getMongoDatabase(), KEY_COLLECTION);
+        ch.writeDocument(rideIdDoc);
+    }
+
+    public Document loadRideIdGeneralKey() {
+        CollectionHandler ch = new CollectionHandler
+                (connection.getMongoDatabase(), KEY_COLLECTION);
+        return ch.loadAllDocuments().first();
+    }
 }

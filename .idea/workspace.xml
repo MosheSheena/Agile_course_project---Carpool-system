@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dff8a6c3-e1fa-4f17-beda-b114679a8dcc" name="Default" comment="Finished implementing (I think so..).&#10;Need to add unit tests.">
+    <list default="true" id="dff8a6c3-e1fa-4f17-beda-b114679a8dcc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/AddRideScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GUI/AddRideScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/SignUpCarDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GUI/SignUpCarDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/SignUpScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GUI/SignUpScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GUI/SignUpUserPass.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GUI/SignUpUserPass.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/go-back-left-arrow_icon-icons.com_72738.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Logic/Commuter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Logic/Commuter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Logic/LogicFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Logic/LogicFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AddRideScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AddRideScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AddRideScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AddRideScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CarpoolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CarpoolController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/LoginScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/LoginScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SignUpCarDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SignUpCarDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SignUpScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SignUpScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SignUpUserPass.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SignUpUserPass.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SignUpUserPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SignUpUserPassController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/go-back-left-arrow_icon-icons.com_72738.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/go-back-left-arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Storage/StorageFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Storage/StorageFacade.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,107 +21,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LogicFacade.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LogicFacade.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Core/Logic/LogicFacade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="638">
+              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginScreen.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreen.fxml">
+      <file leaf-file-name="StorageFacade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Core/Storage/StorageFacade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file leaf-file-name="LoginScreenController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreenController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="57" column="62" lean-forward="true" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarpoolController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/CarpoolController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="126" selection-start-line="126" selection-end-line="126" />
+            <state relative-caret-position="411">
+              <caret line="149" column="45" selection-start-line="149" selection-start-column="45" selection-end-line="149" selection-end-column="45" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddRideScreenController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/AddRideScreenController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Commuter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Core/Logic/Commuter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-              <folding>
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#578#579#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddRideScreen.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/AddRideScreen.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="88" selection-start-line="19" selection-start-column="88" selection-end-line="19" selection-end-column="88" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file leaf-file-name="CarpoolScreen.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/CarpoolScreen.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="86" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file leaf-file-name="SignUpUserPassController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/SignUpUserPassController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CurrentUserDetail.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Core/Logic/CurrentUserDetail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="e#836#837#0" expanded="true" />
+                <element signature="method#provideCredentials#0;class#StorageFacade#0" />
+                <element signature="method#openConnection#0;class#StorageFacade#0" />
+                <element signature="method#openConnection#1;class#StorageFacade#0" />
+                <element signature="method#registerNewUser#0;class#StorageFacade#0" />
+                <element signature="method#existsUser#0;class#StorageFacade#0" />
+                <element signature="method#loadAllUsers#0;class#StorageFacade#0" />
+                <element signature="method#loadAllUnexecutedRides#0;class#StorageFacade#0" />
+                <element signature="method#loadRideHistory#0;class#StorageFacade#0" />
+                <element signature="method#updateRideStatusToExecuted#0;class#StorageFacade#0" />
+                <element signature="method#updateRideDetails#0;class#StorageFacade#0" />
               </folding>
             </state>
           </provider>
@@ -170,8 +79,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="amitlevy21 &lt;amitlevy347@gmail.com&gt;" />
         <option value="moshesheena &lt;moshesheena@gmail.com&gt;" />
+        <option value="amitlevy21 &lt;amitlevy347@gmail.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -211,13 +120,11 @@
         <option value="$PROJECT_DIR$/src/Core/Storage/ConnectionStatus.java" />
         <option value="$PROJECT_DIR$/src/Core/Storage/ObjectToDocumentAdapter.java" />
         <option value="$PROJECT_DIR$/src/Core/Storage/UserToDocumentAdapter.java" />
-        <option value="$PROJECT_DIR$/src/Core/Storage/User.java" />
         <option value="$PROJECT_DIR$/src/Core/Storage/RideToDocumentAdapter.java" />
         <option value="$PROJECT_DIR$/src/Core/Storage/MongoConnection.java" />
         <option value="$PROJECT_DIR$/tests/Core/Storage/StorageFacadeTest.java" />
         <option value="$PROJECT_DIR$/src/Core/Storage/CollectionHandler.java" />
         <option value="$PROJECT_DIR$/src/Core/Storage/Adapters.java" />
-        <option value="$PROJECT_DIR$/src/Core/Storage/StorageFacade.java" />
         <option value="$PROJECT_DIR$/src/Core/Storage/CurrentUserDetails.java" />
         <option value="$PROJECT_DIR$/src/Core/Storage/Session.java" />
         <option value="$PROJECT_DIR$/src/Core/Logic/Hitchhiker.java" />
@@ -228,7 +135,6 @@
         <option value="$PROJECT_DIR$/src/GUI/MainGUI.java" />
         <option value="$PROJECT_DIR$/tests/CarpoolTest.java" />
         <option value="$PROJECT_DIR$/src/GUI/RideDetailsController.java" />
-        <option value="$PROJECT_DIR$/src/Core/Logic/LogicFacade.java" />
         <option value="$PROJECT_DIR$/src/GUI/AddRideScreen.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/CarpoolController.java" />
         <option value="$PROJECT_DIR$/src/GUI/SignUpUserPassController.java" />
@@ -236,6 +142,9 @@
         <option value="$PROJECT_DIR$/src/GUI/LoginScreenController.java" />
         <option value="$PROJECT_DIR$/src/Core/Logic/Commuter.java" />
         <option value="$PROJECT_DIR$/src/Core/Logic/CurrentUserDetail.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/User.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/StorageFacade.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/LogicFacade.java" />
       </list>
     </option>
   </component>
@@ -248,10 +157,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="120" />
-    <option name="width" value="950" />
-    <option name="height" value="784" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="724" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -264,6 +173,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -321,8 +232,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -536,6 +445,8 @@
       <workItem from="1527520172471" duration="248000" />
       <workItem from="1527602832058" duration="4556000" />
       <workItem from="1527613060528" duration="1620000" />
+      <workItem from="1527781020672" duration="270000" />
+      <workItem from="1527851264340" duration="792000" />
     </task>
     <task id="LOCAL-00001" summary="basic GUI with hooks for the database">
       <created>1526673117178</created>
@@ -614,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527609846255</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Changed User class to contain a Commuter object instead of a Person one.">
+      <created>1527781276363</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1527781276363</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -650,7 +568,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117037000" />
+    <option name="totallyTimeSpent" value="118099000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -662,12 +580,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="34" width="1920" height="1046" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="724" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3276923" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -675,57 +592,35 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20797414" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22772278" />
+      <window_info anchor="right" id="Mongo Explorer" order="4" weight="0.2109375" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4953846" visible="true" weight="0.22604166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4938575" visible="true" weight="0.20859376" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.50461537" side_tool="true" weight="0.209375" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39762932" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Learn" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4938575" visible="true" weight="0.20877458" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22772278" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Structure" order="1" sideWeight="0.5061425" side_tool="true" weight="0.20574887" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.329429" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3276923" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39846155" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32673267" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Mongo Explorer" order="4" weight="0.2109375" />
-      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3276923" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.329429" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22772278" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3276923" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22772278" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.329429" />
       <window_info id="UI Designer" order="4" />
@@ -750,6 +645,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" sideWeight="0.5061425" side_tool="true" weight="0.20574887" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3276923" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39846155" />
     </layout-to-restore>
   </component>
@@ -771,7 +667,8 @@
     <MESSAGE value="Finished implementing (I think so..).&#10;Need to add unit tests." />
     <MESSAGE value="backend integration with frontend maybe done" />
     <MESSAGE value="small fix - compilation error" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fix - compilation error" />
+    <MESSAGE value="Changed User class to contain a Commuter object instead of a Person one." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed User class to contain a Commuter object instead of a Person one." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -817,6 +714,40 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/GUI/AddRideScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/Commuter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/SignUpUserPassController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/CurrentUserDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#836#837#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -866,10 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <folding>
-            <element signature="e#184#185#0" expanded="true" />
-            <element signature="e#214#215#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -880,42 +807,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/Storage/CollectionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-          <folding>
-            <element signature="method#CollectionHandler#0;class#CollectionHandler#0" />
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="method#loadDocument#0;class#CollectionHandler#0" />
-            <element signature="method#loadDocuments#0;class#CollectionHandler#0" />
-            <element signature="method#updateDocument#0;class#CollectionHandler#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/Storage/StorageFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="method#saveNewRide#0;class#StorageFacade#0" />
-            <element signature="method#loadAllUnexecutedRides#0;class#StorageFacade#0" />
-            <element signature="method#loadRideHistory#0;class#StorageFacade#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Storage/CurrentUserDetails.java" />
     <entry file="file://$PROJECT_DIR$/src/Core/Storage/Session.java" />
-    <entry file="file://$PROJECT_DIR$/src/Core/Storage/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/SignUpCarDetailsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -955,9 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="93" column="45" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -967,14 +857,6 @@
           <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/RideDetails.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/MainGUI.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -987,84 +869,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-862">
           <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/Storage/Adapters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jfxrt.jar!/javafx/stage/Stage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="101" column="30" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jfxrt.jar!/javafx/fxml/FXMLLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="458" selection-start-line="458" selection-end-line="458" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreen.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/CarpoolScreen.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="86" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jfxrt.jar!/javafx/stage/Stage.class" />
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jfxrt.jar!/javafx/fxml/FXMLLoader.class" />
     <entry file="file://$PROJECT_DIR$/src/GUI/SignUpUserPassController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+        <state relative-caret-position="696">
+          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/Logic/LogicFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/AddRideScreen.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="88" selection-start-line="19" selection-start-column="88" selection-end-line="19" selection-end-column="88" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="57" column="62" lean-forward="true" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
+        <state relative-caret-position="864">
+          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/CarpoolController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="2328">
           <caret line="126" selection-start-line="126" selection-end-line="126" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1074,7 +900,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/AddRideScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="528">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1082,24 +908,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/Logic/Commuter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding>
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Logic/CurrentUserDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="744">
           <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="e#836#837#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/Commuter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/Adapters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/CollectionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="78" column="77" selection-start-line="78" selection-start-column="77" selection-end-line="78" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/StorageFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="149" column="45" selection-start-line="149" selection-start-column="45" selection-end-line="149" selection-end-column="45" />
+          <folding>
+            <element signature="method#provideCredentials#0;class#StorageFacade#0" />
+            <element signature="method#openConnection#0;class#StorageFacade#0" />
+            <element signature="method#openConnection#1;class#StorageFacade#0" />
+            <element signature="method#registerNewUser#0;class#StorageFacade#0" />
+            <element signature="method#existsUser#0;class#StorageFacade#0" />
+            <element signature="method#loadAllUsers#0;class#StorageFacade#0" />
+            <element signature="method#loadAllUnexecutedRides#0;class#StorageFacade#0" />
+            <element signature="method#loadRideHistory#0;class#StorageFacade#0" />
+            <element signature="method#updateRideStatusToExecuted#0;class#StorageFacade#0" />
+            <element signature="method#updateRideDetails#0;class#StorageFacade#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/LogicFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
         </state>
       </provider>
     </entry>
