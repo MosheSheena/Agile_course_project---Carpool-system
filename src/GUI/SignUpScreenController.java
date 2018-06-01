@@ -97,7 +97,7 @@ public class SignUpScreenController implements Initializable {
                     Integer.parseInt(ageInputField.getText()));
 
             CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
-            currentUserDetail.setPerson(p);
+            currentUserDetail.setPersonRegisterDetails(p);
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUpCarDetails.fxml"));
 

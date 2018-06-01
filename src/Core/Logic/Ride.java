@@ -50,7 +50,7 @@ public class Ride {
 
 	public Set<Hitchhiker> getHitchhikers() {return hitchhikers;}
 	
-	public int getNumOfHichhikers() {return hitchhikers.size();}
+	public int getNumOfHitchhikers() {return hitchhikers.size();}
 
 	public int getPricePerHitchhiker() {return pricePerHitchhiker;}
 
@@ -62,7 +62,7 @@ public class Ride {
 	 @throws NoSeatAvailableInRideException*/
 
 	public void addHitchhiker(Hitchhiker hitchhiker) throws NoSeatAvailableInRideException {
-		if (getNumOfHichhikers() >= theCar.getNumOfSeatsAvailable())
+		if (getNumOfHitchhikers() >= theCar.getNumOfSeatsAvailable())
 			throw new NoSeatAvailableInRideException("no room in ride " + this + " cannot add " + hitchhiker);
 		hitchhikers.add(hitchhiker);
 	}
@@ -151,10 +151,10 @@ public class Ride {
     }
 
     public boolean hasRoom() {
-		return getNumOfHichhikers() < theCar.getNumOfSeatsAvailable();
+		return getNumOfHitchhikers() < theCar.getNumOfSeatsAvailable();
 	}
 
 	public boolean canBeExecuted() {
-	    return rideDriver != null && theCar != null && getNumOfHichhikers() > 0;
+	    return rideDriver != null && theCar != null && getNumOfHitchhikers() > 0;
     }
 }

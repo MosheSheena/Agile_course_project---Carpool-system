@@ -57,7 +57,7 @@ public class SignUpCarDetailsController implements Initializable {
     @FXML
     public void skipPressed(ActionEvent event) throws IOException {
         CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
-        Hitchhiker hitchhiker = new Hitchhiker(currentUserDetail.getPerson());
+        Hitchhiker hitchhiker = new Hitchhiker(currentUserDetail.getPersonRegisterDetails());
         currentUserDetail.setUserRole(hitchhiker);
         goToUserPassScreen(event);
     }
@@ -97,7 +97,7 @@ public class SignUpCarDetailsController implements Initializable {
                     Double.parseDouble(gasPerKMInput.getText()),
                     regPlateInputField.getText());
             CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
-            RideDriver rideDriver = new RideDriver(currentUserDetail.getPerson());
+            RideDriver rideDriver = new RideDriver(currentUserDetail.getPersonRegisterDetails());
             rideDriver.addCar(c);
             currentUserDetail.setUserRole(rideDriver);
             goToUserPassScreen(event);

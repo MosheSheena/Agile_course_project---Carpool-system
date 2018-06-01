@@ -8,8 +8,9 @@ public class CurrentUserDetail {
 
     private String username;
     private String password;
-    private Person person;
     private Commuter userRole;
+
+    private Person personRegisterDetails;
 
     private static CurrentUserDetail ourInstance = new CurrentUserDetail();
 
@@ -35,14 +36,6 @@ public class CurrentUserDetail {
         this.password = password;
     }
 
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
     public Commuter getUserRole() {
         return userRole;
     }
@@ -51,4 +44,11 @@ public class CurrentUserDetail {
         this.userRole = userRole;
     }
 
+    public Person getPersonRegisterDetails() {
+        return personRegisterDetails;
+    }
+
+    public void setPersonRegisterDetails(Person personRegisterDetails) {
+        this.personRegisterDetails = personRegisterDetails;
+    }
 }

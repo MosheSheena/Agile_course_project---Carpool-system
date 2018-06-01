@@ -65,9 +65,9 @@ public class AddRideScreenController implements Initializable {
         logicFacade.registerNewRide(r);
 
         CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
-        carpool.registerRide(r, currentUserDetail.getUserRole());
-
-
+        Commuter c = currentUserDetail.getUserRole();
+        RideDriver rideDriver = new RideDriver(c.getId(), c.getName(), c.getAddress(), c.getCity(), c.getAge(), chooseCarCB.getSelectionModel().getSelectedItem());
+        carpool.registerRide(r, rideDriver);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("CarpoolScreen.fxml"));
 

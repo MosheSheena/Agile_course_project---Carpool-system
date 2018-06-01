@@ -3,7 +3,7 @@ package Core.Logic;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Commuter extends Person{
+public class Commuter extends Person{
 	
 	private List<Car> carsOwned;
 	private List<Ride> executedRides;
