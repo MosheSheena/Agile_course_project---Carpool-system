@@ -141,6 +141,12 @@ public class StorageFacade {
     public void saveRideIdGeneralKey(Document rideIdDoc) {
         CollectionHandler ch = new CollectionHandler
                 (connection.getMongoDatabase(), KEY_COLLECTION);
+        if(ch.getCollectionSize() > 0) {
+            ch.updateDocument("rideIdGenKey",
+                    (int)rideIdDoc.get("rideIdGenKey") - 1,
+                    rideIdDoc.get("rideIdGenKey"));
+            return;
+        }
         ch.writeDocument(rideIdDoc);
     }
 

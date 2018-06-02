@@ -39,4 +39,8 @@ public class CollectionHandler {
         collection.updateOne(Filters.eq
                 (fieldName, oldValue),Updates.set(fieldName, newValue));
     }
+
+    public long getCollectionSize() {
+        return collection.count();
+    }
 }
