@@ -22,7 +22,10 @@ public class Ride {
 	private boolean executed;
 	
 	public Ride(String destination, String source) {
+	    LogicFacade logicFacade = LogicFacade.getInstance();
+	    idGenerator = logicFacade.loadRideIdGenKey();
 	    rideID = ++idGenerator;
+	    logicFacade.saveRideIdGenKey(idGenerator);
 		this.destination = destination;
 		this.source = source;
 		this.hitchhikers = new HashSet<>();
