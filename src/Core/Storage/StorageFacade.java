@@ -147,6 +147,11 @@ public class StorageFacade {
     public Document loadRideIdGeneralKey() {
         CollectionHandler ch = new CollectionHandler
                 (connection.getMongoDatabase(), KEY_COLLECTION);
+
+        FindIterable<Document> key = ch.loadAllDocuments();
+        if(key.first() == null) {
+            saveRideIdGeneralKey(new Document("rideIdGenKey", 0));
+        }
         return ch.loadAllDocuments().first();
     }
 }
