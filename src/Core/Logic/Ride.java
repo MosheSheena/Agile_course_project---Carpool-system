@@ -1,17 +1,18 @@
 package Core.Logic;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-public class Ride {
+public class Ride implements RideStatusObservable{
 	
 	/*
 	 * Describes a planned ride or an actual ride
 	 */
 
 	private int rideID;
-	private static int idGenerator = 0;
+	private static int idGenerator;
 	private String destination;
 	private String source;
 	private int pricePerHitchhiker;
@@ -20,6 +21,7 @@ public class Ride {
 	private Set<Hitchhiker> hitchhikers;
 	private int moneySavedFromRide;
 	private boolean executed;
+	private ArrayList<RideStatusObserver> rideStatusObservers;
 	
 	public Ride(String destination, String source) {
 	    LogicFacade logicFacade = LogicFacade.getInstance();
@@ -31,6 +33,8 @@ public class Ride {
 		this.hitchhikers = new HashSet<>();
 		this.pricePerHitchhiker = calcPriceOfRide();
 		this.executed = false;
+
+		rideStatusObservers = new ArrayList<>();
 	}
 
     /** begin of getters / setters */
@@ -160,4 +164,14 @@ public class Ride {
 	public boolean canBeExecuted() {
 	    return rideDriver != null && theCar != null && getNumOfHitchhikers() > 0;
     }
+
+	@Override
+	public void addListener(RideStatusObserver rideStatusObserver) {
+		rideStatusObservers.add(rideStatusObserver);
+	}
+
+	@Override
+	public void removeListener(RideStatusObserver rideStatusObserver) {
+		rideStatusObservers.remove(rideStatusObserver);
+	}
 }

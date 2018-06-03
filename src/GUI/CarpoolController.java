@@ -2,6 +2,7 @@ package GUI;
 
 import Core.Logic.LogicFacade;
 import Core.Logic.Ride;
+import Core.Logic.RideStatusObserver;
 import com.jfoenix.controls.*;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
@@ -26,7 +27,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Set;
 
-public class CarpoolController implements Initializable {
+public class CarpoolController implements Initializable, RideStatusObserver {
 
     @FXML
     private BorderPane borderPane;
@@ -168,4 +169,23 @@ public class CarpoolController implements Initializable {
 
     }
 
+    @Override
+    public void onJoinRideAction() {
+
+    }
+
+    @Override
+    public void onLeaveRideAction() {
+
+    }
+
+    @Override
+    public void onCancelRideAction() {
+
+    }
+
+    @Override
+    public void onExecuteRideAction() {
+
+    }
 }

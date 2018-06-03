@@ -2,7 +2,6 @@ package GUI;
 
 
 import Core.Logic.*;
-import Core.Storage.User;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
@@ -18,7 +17,7 @@ import javafx.scene.text.Text;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class RideDetailsController implements Initializable {
+public class RideDetailsController implements Initializable{
 
     @FXML
     public BorderPane borderPane;
@@ -131,5 +130,6 @@ public class RideDetailsController implements Initializable {
         carpool.cancelRide(chosenRide);
         // TODO: 22-05-18 notify all commuters
     }
+
 }
 
