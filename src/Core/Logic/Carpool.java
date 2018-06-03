@@ -52,7 +52,6 @@ public class Carpool {
 			e.printStackTrace();
 			System.out.println("we should not get here");
 		}
-		creatorOfRide.addRide(ride);
 		plannedRides.add(ride);
 		// and more
 	}
@@ -82,7 +81,7 @@ public class Carpool {
 		} else {
 			// notify driver removed from ride
 		}
-		return commuter.removeRide(ride);
+		return removedFromRide;
 	}
 
 	public boolean cancelRide(Ride ride) {

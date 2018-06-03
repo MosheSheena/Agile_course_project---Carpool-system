@@ -1,8 +1,6 @@
 package GUI;
 
-import Core.Logic.LogicFacade;
-import Core.Logic.Ride;
-import Core.Logic.RideStatusObserver;
+import Core.Logic.*;
 import com.jfoenix.controls.*;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
@@ -27,7 +25,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Set;
 
-public class CarpoolController implements Initializable, RideStatusObserver {
+public class CarpoolController implements Initializable {
 
     @FXML
     private BorderPane borderPane;
@@ -169,23 +167,15 @@ public class CarpoolController implements Initializable, RideStatusObserver {
 
     }
 
-    @Override
-    public void onJoinRideAction() {
-
+    public void removeRideFromList(Ride r) {
+        plannedRides.remove(r);
+        historyRides.add(r);
+        if (historyRadioButton.isSelected())
+            jfxListView.setItems(historyRides);
+        else
+            jfxListView.setItems(plannedRides);
+        jfxListView.getItems().remove(jfxListView.getSelectionModel().getSelectedItem());
+        jfxListView.refresh();
     }
 
-    @Override
-    public void onLeaveRideAction() {
-
-    }
-
-    @Override
-    public void onCancelRideAction() {
-
-    }
-
-    @Override
-    public void onExecuteRideAction() {
-
-    }
 }

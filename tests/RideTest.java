@@ -58,7 +58,7 @@ public class RideTest {
         try {
             ride.executeRide();
             assertTrue(ride.isExecuted());
-        } catch (NoRideDriverAssignedException | NoCarAssignedException noRideDriverAssigned) {
+        } catch (NoRideDriverAssignedException noRideDriverAssigned) {
             noRideDriverAssigned.printStackTrace();
         }
     }

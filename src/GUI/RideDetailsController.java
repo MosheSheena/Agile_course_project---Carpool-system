@@ -2,18 +2,23 @@ package GUI;
 
 
 import Core.Logic.*;
+import Core.Storage.DocumentNotFoundException;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -21,6 +26,9 @@ public class RideDetailsController implements Initializable{
 
     @FXML
     public BorderPane borderPane;
+
+    @FXML
+    public JFXButton leaveRide;
 
     @FXML
     private Label sourceInput;
@@ -60,13 +68,14 @@ public class RideDetailsController implements Initializable{
         // if ride has room - allow to join
         // if ride is allowed to be executed - allow execute
         chosenRide = ride;
-       CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
-       if (!(currentUserDetail.getUserRole() instanceof RideDriver))
+        leaveRide.setDisable(true);
+        CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
+        if (!(currentUserDetail.getUserRole() instanceof RideDriver))
            cancelRide.setDisable(true);
         if(!ride.hasRoom())
             joinRide.setDisable(true);
-        if(!ride.canBeExecuted() || !(currentUserDetail.getUserRole() instanceof RideDriver))
-            executeRide.setDisable(true);
+        //if(!ride.canBeExecuted() || !(currentUserDetail.getUserRole() instanceof RideDriver))
+          //  executeRide.setDisable(true);
     }
 
     public void setRideDetails(String source, String destination, Integer pricePerHitchhiker, String driverName, Integer numHitchhiker) {
@@ -84,26 +93,33 @@ public class RideDetailsController implements Initializable{
         Commuter commuter = currentUserDetail.getUserRole();
         try {
             carpool.assignCommuterToRide(commuter, chosenRide);
+            showDialog("Successfully joined!", "You joined the Ride " + chosenRide.toString());
+            joinRide.setDisable(true);
+            leaveRide.setDisable(false);
         } catch (NoSeatAvailableInRideException e) {
-            showNoSeatAvailableDialog();
+            showDialog("Out of seats", "No more room in Ride");
         }
-        // TODO: 23-05-18 bind to listener so we can know if ride status had change and notify accordingly
+
     }
 
-    private void showNoSeatAvailableDialog() {
+    private void showDialog(String title, String body) {
         StackPane stackPane;
         stackPane = new StackPane();
-        borderPane.setCenter(stackPane);
+        Node beforeChange = borderPane.getLeft();
+        borderPane.setLeft(stackPane);
 
         JFXDialogLayout jfxDialogLayout = new JFXDialogLayout();
-        jfxDialogLayout.setHeading(new Text("No room in ride"));
-        jfxDialogLayout.setBody(new Text("Sorry, you cannot join the ride. Reason - no room"));
+        jfxDialogLayout.setHeading(new Text(title));
+        jfxDialogLayout.setBody(new Text(body));
 
         JFXDialog jfxDialog = new JFXDialog(stackPane, jfxDialogLayout, JFXDialog.DialogTransition.CENTER);
 
         JFXButton closeDialogButton = new JFXButton("Okay");
 
-        closeDialogButton.setOnAction((EventHandler<ActionEvent>) event1 -> jfxDialog.close());
+        closeDialogButton.setOnAction((EventHandler<ActionEvent>) event1 -> {
+            jfxDialog.close();
+            borderPane.setLeft(beforeChange);
+        });
 
         jfxDialogLayout.setActions(closeDialogButton);
 
@@ -115,20 +131,52 @@ public class RideDetailsController implements Initializable{
         Carpool carpool = Carpool.getInstance();
         CurrentUserDetail currentUserDetail = CurrentUserDetail.getInstance();
         carpool.removeCommuterFromRide(currentUserDetail.getUserRole(), chosenRide);
-        // TODO: 22-05-18 notify ride drive or hitchhikers
+
+        showDialog("Successfully Leaved", "You have left the Ride " + chosenRide.toString());
+        leaveRide.setDisable(true);
+        joinRide.setDisable(false);
+        executeRide.setDisable(true);
+        cancelRide.setDisable(true);
     }
 
     @FXML
     public void executePressed(ActionEvent event) throws NoCarAssignedException, NoRideDriverAssignedException {
         Carpool carpool = Carpool.getInstance();
-        carpool.executeRide(chosenRide);
+        boolean isExecuted = carpool.executeRide(chosenRide);
+
+        //if (isExecuted) {
+            showDialog("Ride executed!", "Ride " + chosenRide.toString() + "has set off!\nDrive safe ! :)");
+            leaveRide.setDisable(true);
+            joinRide.setDisable(true);
+            executeRide.setDisable(true);
+            cancelRide.setDisable(true);
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CarpoolScreen.fxml"));
+            Parent root = fxmlLoader.load();
+            CarpoolController carpoolController = fxmlLoader.getController();
+            carpoolController.removeRideFromList(chosenRide);
+            LogicFacade logicFacade = LogicFacade.getInstance();
+            logicFacade.changeRideStatusToExecuted(chosenRide);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (DocumentNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        //}
+        //else {
+          //  showDialog("Failed to execute", "Ride " + chosenRide.toString() + "cannot be executed");
+       // }
     }
 
     @FXML
     public void cancelPressed(ActionEvent event) {
         Carpool carpool = Carpool.getInstance();
         carpool.cancelRide(chosenRide);
-        // TODO: 22-05-18 notify all commuters
+
+        showDialog("Successfully canceled", "You have canceled the Ride " + chosenRide.toString());
+
     }
 
 }

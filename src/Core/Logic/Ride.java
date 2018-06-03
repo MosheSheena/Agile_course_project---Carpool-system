@@ -16,7 +16,6 @@ public class Ride implements RideStatusObservable{
 	private String destination;
 	private String source;
 	private int pricePerHitchhiker;
-	private Car theCar;
 	private RideDriver rideDriver;
 	private Set<Hitchhiker> hitchhikers;
 	private int moneySavedFromRide;
@@ -49,9 +48,7 @@ public class Ride implements RideStatusObservable{
 
 	public void setSource(String source) {this.source = source;}
 
-	public Car getTheCar() {return theCar;}
-
-	private void setTheCar(Car theCar) {this.theCar = theCar;}
+	public Car getTheCar() {return rideDriver.getDefaultCar();}
 
 	public RideDriver getRideDriver() {return rideDriver;}
 
@@ -69,19 +66,17 @@ public class Ride implements RideStatusObservable{
 	 @throws NoSeatAvailableInRideException*/
 
 	public void addHitchhiker(Hitchhiker hitchhiker) throws NoSeatAvailableInRideException {
-		if (getNumOfHitchhikers() >= theCar.getNumOfSeatsAvailable())
+		if (getNumOfHitchhikers() >= rideDriver.getDefaultCar().getNumOfSeatsAvailable())
 			throw new NoSeatAvailableInRideException("no room in ride " + this + " cannot add " + hitchhiker);
 		hitchhikers.add(hitchhiker);
 	}
 	
 	public void assignRideDriver(RideDriver carOwner) {
 		this.rideDriver = carOwner;
-		setTheCar(carOwner.getDefaultCar());
 	}
 
 	public void removeRideDriver(RideDriver rideDriver) {
 		this.rideDriver = null;
-		setTheCar(null); //remove car
 	}
 	
 	// smart assignment to ride
@@ -98,20 +93,11 @@ public class Ride implements RideStatusObservable{
 		return rideDriver != null;
 	}
 	
-	public void executeRide() throws NoRideDriverAssignedException, NoCarAssignedException {
+	public void executeRide() throws NoRideDriverAssignedException {
 		if (rideDriver == null)
 			throw new NoRideDriverAssignedException("cannot execute ride, no driver assign");
-		if (theCar == null)
-			throw new NoCarAssignedException("cannot execute ride, no car assign");
+
 		executed = true;
-		try {
-			rideDriver.executeRide(this);
-			for(Hitchhiker h : hitchhikers) {
-				h.executeRide(this);
-			}
-		} catch (RideNotExecutedException e) {
-			e.printStackTrace();
-		}
 	}
 	
 	private int calcPriceOfRide() {
@@ -158,11 +144,11 @@ public class Ride implements RideStatusObservable{
     }
 
     public boolean hasRoom() {
-		return getNumOfHitchhikers() < theCar.getNumOfSeatsAvailable();
+		return getNumOfHitchhikers() < rideDriver.getDefaultCar().getNumOfSeatsAvailable();
 	}
 
 	public boolean canBeExecuted() {
-	    return rideDriver != null && theCar != null && getNumOfHitchhikers() > 0;
+	    return rideDriver != null && rideDriver.getDefaultCar() != null && getNumOfHitchhikers() > 0;
     }
 
 	@Override
