@@ -1,4 +1,4 @@
-import Hitchhiker.side.*;
+import Core.Logic.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,22 +13,21 @@ public class CarpoolTest {
     private Hitchhiker testHitchhiker;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
 
         carpool = Carpool.getInstance();
-        testDriver = new RideDriver(245, "yochay", "gavitaim", 27, "givatim");
         testCar = new Car("jaguar", "red", 3, 25.5, "1324-a");
-        testHitchhiker = new Hitchhiker(43, "dudi", "ramat-gan", 28, "ramat-gan");
-        testDriver.addCar(testCar);
+        testDriver = new RideDriver(245, "yochay", "gavitaim", "givatim", 27, testCar);
+        testHitchhiker = new Hitchhiker(43, "dudi", "ramat-gan", "ramat-gan", 28);
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         carpool = null;
     }
 
     @Test
-    public void executeRide() {
+    public void executeRide() throws NoCarAssignedException, NoRideDriverAssignedException {
 
         Ride ride = new Ride("hi", "bye");
         try {
@@ -41,28 +40,26 @@ public class CarpoolTest {
     }
 
     @Test
-    public void executeRideWithNoDriver() {
+    public void executeRideWithNoDriver() throws NoCarAssignedException, NoRideDriverAssignedException {
         Ride ride = new Ride("hi", "bye");
         assertFalse(carpool.executeRide(ride));
-        try {
-            carpool.registerRide(ride, testDriver);
-        } catch (NoSeatAvailableInRideException noSeatAvailableInRideException) {
-            noSeatAvailableInRideException.printStackTrace();
-        }
+
+        carpool.registerRide(ride, testDriver);
+
         assertFalse(carpool.executeRide(ride));
-        ride.assignRideDriver(testDriver, testCar);
+        ride.assignRideDriver(testDriver);
         assertFalse(carpool.executeRide(ride));
     }
 
     @Test
-    public void executeRideWithNoHitchhikers() {
+    public void executeRideWithNoHitchhikers() throws NoCarAssignedException, NoRideDriverAssignedException {
         Ride ride = new Ride("hi", "bye");
         assertFalse(carpool.executeRide(ride));
     }
 
 
     @Test
-    public void registerRide() throws NoSeatAvailableInRideException {
+    public void registerRide() throws NoSeatAvailableInRideException, NoCarAssignedException, NoRideDriverAssignedException {
         Ride ride = new Ride("hi", "bye");
         carpool.registerRide(ride, testDriver);
         carpool.assignCommuterToRide(testHitchhiker, ride);

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AddRideScreenController">
+    <center>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="300.0" prefWidth="156.0" spacing="30.0">
+                    <children>
+                        <JFXTextField fx:id="destinationInputField" focusColor="#2196f3" labelFloat="true" promptText="Destination" />
+                        <JFXTextField fx:id="sourceInputField" focusColor="#2196f3" labelFloat="true" promptText="Source" />
+                  <JFXComboBox fx:id="chooseCarCB" focusColor="#2196f3" onAction="#choosedCar" promptText="Choose Car" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="TOP_LEFT">
+            <children>
+                <ImageView fx:id="returnCarpoolScreen" fitHeight="24.0" fitWidth="24.0" onMousePressed="#returnCarpoolPressed" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../go-back-left-arrow.png" />
+                    </image>
+                </ImageView>
+                <Label text="Enter Ride Details">
+                    <padding>
+                        <Insets left="200.0" />
+                    </padding>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <JFXButton fx:id="addRideButton" onAction="#addPressed" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Next" textFill="WHITE" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+    </bottom>
+</BorderPane>

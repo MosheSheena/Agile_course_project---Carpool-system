@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c43de388-f431-49a2-89e9-a4a3ee3989b8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Carpool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Carpool.iml" afterDir="false" />
+    <list default="true" id="dff8a6c3-e1fa-4f17-beda-b114679a8dcc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/RideTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/RideTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Logic/Carpool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Logic/Carpool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Logic/Commuter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Logic/Commuter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Logic/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Logic/Ride.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AddRideScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AddRideScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CarpoolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CarpoolController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/RideDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/RideDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/RideTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RideTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,40 +20,119 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Agile_course_project___Carpool_system$MainGUI.ic" NAME="MainGUI Coverage Results" MODIFIED="1527004958422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>GUI.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NoRideDriverAssignedException.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/NoRideDriverAssignedException.java">
+      <file leaf-file-name="LogicFacade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Core/Logic/LogicFacade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="630">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NoSeatAvailableInRideException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/NoSeatAvailableInRideException.java">
+      <file leaf-file-name="SignUpUserPassController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/SignUpUserPassController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="345">
+              <caret line="62" column="119" selection-start-line="62" selection-start-column="119" selection-end-line="62" selection-end-column="119" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Person.java">
+      <file leaf-file-name="SignUpScreenController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/SignUpScreenController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="297">
+              <caret line="93" column="45" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddRideScreenController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/AddRideScreenController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignUpCarDetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/SignUpCarDetailsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="99" column="95" selection-start-line="99" selection-start-column="95" selection-end-line="99" selection-end-column="95" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Adapters.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Core/Storage/Adapters.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#518#519#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#734#735#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Ride.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Ride.java">
+        <entry file="file://$PROJECT_DIR$/src/Core/Logic/Ride.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="489">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RideDetailsController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/RideDetailsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="161" column="32" lean-forward="true" selection-start-line="161" selection-start-column="32" selection-end-line="161" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RideDetails.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/RideDetails.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarpoolController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/CarpoolController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="167" column="5" lean-forward="true" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#signOut#0;class#CarpoolController#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,34 +142,95 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Arquillian JUnit Test Class" />
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="Enum" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
+        <option value="Singleton" />
+        <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>defaultRideAssignment</find>
+      <find>initButtons</find>
+      <find>CollectionLoader</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>CollectionHandler</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="amitlevy21 &lt;amitlevy347@gmail.com&gt;" />
+        <option value="moshesheena &lt;moshesheena@gmail.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="GUI" />
       </map>
     </option>
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/RideTest.java" />
-        <option value="$PROJECT_DIR$/src/Ride.java" />
+        <option value="$PROJECT_DIR$/src/GUI/RideDetails.fxml" />
         <option value="$PROJECT_DIR$/tests/RideTest.java" />
+        <option value="$PROJECT_DIR$/src/GUI/SignUpScreen.fxml" />
+        <option value="$PROJECT_DIR$/src/GUI/SignUpCarDetails.fxml" />
+        <option value="$PROJECT_DIR$/src/GUI/SignUpUserPass.fxml" />
+        <option value="$PROJECT_DIR$/src/Hitchhiker/side/Main.java" />
+        <option value="$PROJECT_DIR$/src/GUI/LoginScreen.fxml" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/DbWriter.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/Person.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/CollectionOperator.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/CollectionOperations.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/CollectionOperaton.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/collectionLoader.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/MongoCredentials.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/Adapter.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/DocumentNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/DBConnectionDownException.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/CollectionLoader.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/CollectionWriter.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/ConnectionStatus.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/ObjectToDocumentAdapter.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/UserToDocumentAdapter.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/User.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/RideToDocumentAdapter.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/MongoConnection.java" />
+        <option value="$PROJECT_DIR$/tests/Core/Storage/StorageFacadeTest.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/CollectionHandler.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/Adapters.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/CurrentUserDetails.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/Session.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/Hitchhiker.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/Carpool.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/RideDriver.java" />
+        <option value="$PROJECT_DIR$/src/GUI/MainGUI.java" />
         <option value="$PROJECT_DIR$/tests/CarpoolTest.java" />
-        <option value="$PROJECT_DIR$/src/Carpool.java" />
-        <option value="$PROJECT_DIR$/src/Commuter.java" />
-        <option value="$PROJECT_DIR$/src/Hitchhiker/side/Ride.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/LogicFacade.java" />
+        <option value="$PROJECT_DIR$/src/GUI/AddRideScreen.fxml" />
+        <option value="$PROJECT_DIR$/src/GUI/SignUpUserPassController.java" />
+        <option value="$PROJECT_DIR$/src/GUI/LoginScreenController.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/CurrentUserDetail.java" />
+        <option value="$PROJECT_DIR$/src/GUI/SignUpScreenController.java" />
+        <option value="$PROJECT_DIR$/src/GUI/SignUpCarDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/GUI/AddRideScreenController.java" />
+        <option value="$PROJECT_DIR$/src/Core/Storage/StorageFacade.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/RideStatusListener.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/RideStatusObservable.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/Ride.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/Commuter.java" />
+        <option value="$PROJECT_DIR$/src/Core/Logic/RideStatusObserver.java" />
+        <option value="$PROJECT_DIR$/src/GUI/CarpoolController.java" />
+        <option value="$PROJECT_DIR$/src/GUI/RideDetailsController.java" />
       </list>
     </option>
   </component>
@@ -98,39 +244,76 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1364" />
-    <option name="height" value="766" />
+    <option name="y" value="120" />
+    <option name="width" value="950" />
+    <option name="height" value="784" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Carpool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agile_course_project---Carpool-system" type="b2602c69:ProjectViewProjectNode" />
               <item name="Agile_course_project---Carpool-system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Carpool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agile_course_project---Carpool-system" type="b2602c69:ProjectViewProjectNode" />
               <item name="Agile_course_project---Carpool-system" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Carpool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agile_course_project---Carpool-system" type="b2602c69:ProjectViewProjectNode" />
               <item name="Agile_course_project---Carpool-system" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="side" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Agile_course_project---Carpool-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agile_course_project---Carpool-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Logic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Agile_course_project---Carpool-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agile_course_project---Carpool-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Agile_course_project---Carpool-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agile_course_project---Carpool-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Agile_course_project---Carpool-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agile_course_project---Carpool-system" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Agile_course_project---Carpool-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agile_course_project---Carpool-system" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Agile_course_project---Carpool-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -139,26 +322,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
+      <recent name="Core.Storage" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\levyamit\Documents\GitHub\Agile_course_project---Carpool-system\src" />
+      <recent name="$PROJECT_DIR$/src/GUI" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -173,14 +355,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Hitchhiker.side.Main" />
+  <component name="RunManager" selected="Application.MainGUI">
+    <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.MainGUI" />
       <module name="Carpool" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Hitchhiker.side.*" />
+          <option name="PATTERN" value="GUI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -188,13 +370,47 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="CarpoolTest.executeRide" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CarpoolTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Carpool" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CarpoolTest" />
-      <option name="METHOD_NAME" value="executeRide" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="RideTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Carpool" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RideTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="RideTest.addTooManyHitchhikers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Carpool" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RideTest" />
+      <option name="METHOD_NAME" value="addTooManyHitchhikers" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -205,48 +421,20 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="CarpoolTest.executeRideWithNoDriver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StorageFacadeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Carpool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Core.Storage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarpoolTest" />
-      <option name="METHOD_NAME" value="executeRideWithNoDriver" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="CarpoolTest.executeRideWithNoHitchhikers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Carpool" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarpoolTest" />
-      <option name="METHOD_NAME" value="executeRideWithNoHitchhikers" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="CarpoolTest.registerRide" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Carpool" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarpoolTest" />
-      <option name="METHOD_NAME" value="registerRide" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="Core.Storage" />
+      <option name="MAIN_CLASS_NAME" value="Core.Storage.StorageFacadeTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -295,140 +483,283 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.CarpoolTest.executeRideWithNoHitchhikers" />
-      <item itemvalue="JUnit.CarpoolTest.executeRideWithNoDriver" />
-      <item itemvalue="JUnit.CarpoolTest.executeRide" />
-      <item itemvalue="JUnit.CarpoolTest.registerRide" />
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.MainGUI" />
+      <item itemvalue="JUnit.CarpoolTest" />
+      <item itemvalue="JUnit.RideTest" />
+      <item itemvalue="JUnit.RideTest.addTooManyHitchhikers" />
+      <item itemvalue="JUnit.StorageFacadeTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.CarpoolTest.registerRide" />
-        <item itemvalue="JUnit.CarpoolTest.executeRide" />
-        <item itemvalue="JUnit.CarpoolTest.executeRideWithNoDriver" />
-        <item itemvalue="JUnit.CarpoolTest.executeRideWithNoHitchhikers" />
+        <item itemvalue="Application.MainGUI" />
+        <item itemvalue="JUnit.StorageFacadeTest" />
+        <item itemvalue="JUnit.RideTest" />
+        <item itemvalue="JUnit.RideTest.addTooManyHitchhikers" />
+        <item itemvalue="JUnit.CarpoolTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",VISIBILITY_SORTER" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c43de388-f431-49a2-89e9-a4a3ee3989b8" name="Default" comment="" />
-      <created>1525795194258</created>
+      <changelist id="dff8a6c3-e1fa-4f17-beda-b114679a8dcc" name="Default" comment="" />
+      <created>1526658222631</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1525795194258</updated>
-      <workItem from="1525795197502" duration="4420000" />
-      <workItem from="1525867614816" duration="1799000" />
-      <workItem from="1526120175934" duration="21000" />
-      <workItem from="1526120301484" duration="187000" />
-      <workItem from="1526188568050" duration="2422000" />
-      <workItem from="1526274457671" duration="393000" />
-      <workItem from="1526275301706" duration="1294000" />
-      <workItem from="1526362678310" duration="622000" />
-      <workItem from="1526393781456" duration="1091000" />
+      <updated>1526658222631</updated>
+      <workItem from="1526658231329" duration="8276000" />
+      <workItem from="1526721874752" duration="13887000" />
+      <workItem from="1526751362761" duration="5918000" />
+      <workItem from="1526804252801" duration="12266000" />
+      <workItem from="1526840760448" duration="4762000" />
+      <workItem from="1526917283169" duration="1313000" />
+      <workItem from="1526963789093" duration="1268000" />
+      <workItem from="1526999256017" duration="10593000" />
+      <workItem from="1527090213238" duration="7545000" />
+      <workItem from="1527229652432" duration="17301000" />
+      <workItem from="1527320474836" duration="16112000" />
+      <workItem from="1527358627816" duration="27000" />
+      <workItem from="1527437604192" duration="2200000" />
+      <workItem from="1527520172471" duration="248000" />
+      <workItem from="1527602832058" duration="4556000" />
+      <workItem from="1527613060528" duration="1620000" />
+      <workItem from="1527795637095" duration="1740000" />
+      <workItem from="1527857733665" duration="2410000" />
+      <workItem from="1528041776471" duration="1626000" />
     </task>
-    <task id="LOCAL-00001" summary="Partly unit tests">
-      <created>1526120368327</created>
+    <task id="LOCAL-00001" summary="basic GUI with hooks for the database">
+      <created>1526673117178</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1526120368327</updated>
+      <updated>1526673117178</updated>
     </task>
-    <task id="LOCAL-00002" summary="unit tests done, ready for integration">
-      <created>1526276067588</created>
+    <task id="LOCAL-00002" summary="Gui progress and minor fixes">
+      <created>1526752325195</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1526276067588</updated>
+      <updated>1526752325195</updated>
     </task>
-    <task id="LOCAL-00003" summary="unit tests done, ready for integration">
-      <created>1526394065934</created>
+    <task id="LOCAL-00003" summary="class files cleanup">
+      <created>1526752873026</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1526394065934</updated>
+      <updated>1526752873026</updated>
     </task>
-    <task id="LOCAL-00004" summary="removed class main">
-      <created>1526394595830</created>
+    <task id="LOCAL-00004" summary="Ride class changes">
+      <created>1526762104438</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1526394595830</updated>
+      <updated>1526762104438</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Basic sign up form (person details) is done">
+      <created>1526817705776</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1526817705776</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add ride in progress">
+      <created>1527003208540</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1527003208540</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added new classes to Storage package.&#10;Started implementing the StorageFacade.&#10;Added some exception classes.">
+      <created>1527236263045</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1527236263046</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Reconfigured some classes">
+      <created>1527242699471</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1527242699471</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Finished implementing (I think so..).&#10;Need to add unit tests.">
+      <created>1527267319414</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1527267319414</updated>
+    </task>
+    <task id="LOCAL-00010" summary="backend integration with frontend maybe done">
+      <created>1527609267585</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1527609267585</updated>
+    </task>
+    <task id="LOCAL-00011" summary="small fix - compilation error">
+      <created>1527609846255</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1527609846255</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add ride scene changes">
+      <created>1527765101124</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1527765101124</updated>
+    </task>
+    <task id="LOCAL-00013" summary="bug fixes, commuter is no longer abstract">
+      <created>1527797364736</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1527797364737</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RideTest_removeCommuter - 2018.05.09 at 16h 36m 49s.xml">
-      <configuration name="RideTest.removeCommuter" configurationId="JUnit" />
+    <history-entry file="RideTest_addTooManyHitchhikers - 2018.05.19 at 23h 29m 49s.xml">
+      <configuration name="RideTest.addTooManyHitchhikers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CarpoolTest_executeNotRegisteredRide - 2018.05.13 at 08h 22m 36s.xml">
-      <configuration name="CarpoolTest.executeNotRegisteredRide" configurationId="JUnit" />
+    <history-entry file="RideTest - 2018.05.19 at 23h 29m 57s.xml">
+      <configuration name="RideTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CarpoolTest_executeNotRegisteredRide - 2018.05.13 at 08h 23m 36s.xml">
-      <configuration name="CarpoolTest.executeNotRegisteredRide" configurationId="JUnit" />
+    <history-entry file="RideTest - 2018.05.19 at 23h 31m 01s.xml">
+      <configuration name="RideTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CarpoolTest_executeRideWithNoHitchhikers - 2018.05.13 at 08h 29m 35s.xml">
-      <configuration name="CarpoolTest.executeRideWithNoHitchhikers" configurationId="JUnit" />
+    <history-entry file="StorageFacadeTest - 2018.05.26 at 11h 06m 35s.xml">
+      <configuration name="StorageFacadeTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CarpoolTest_executeRideWithNoDriver - 2018.05.13 at 08h 29m 58s.xml">
-      <configuration name="CarpoolTest.executeRideWithNoDriver" configurationId="JUnit" />
+    <history-entry file="StorageFacadeTest - 2018.05.26 at 11h 10m 36s.xml">
+      <configuration name="StorageFacadeTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CarpoolTest_executeRideWithNoDriver - 2018.05.13 at 08h 35m 43s.xml">
-      <configuration name="CarpoolTest.executeRideWithNoDriver" configurationId="JUnit" />
+    <history-entry file="StorageFacadeTest - 2018.05.26 at 11h 12m 28s.xml">
+      <configuration name="StorageFacadeTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CarpoolTest_executeRide - 2018.05.13 at 08h 44m 57s.xml">
-      <configuration name="CarpoolTest.executeRide" configurationId="JUnit" />
+    <history-entry file="StorageFacadeTest - 2018.05.26 at 11h 13m 46s.xml">
+      <configuration name="StorageFacadeTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CarpoolTest_executeRide - 2018.05.13 at 08h 45m 59s.xml">
-      <configuration name="CarpoolTest.executeRide" configurationId="JUnit" />
+    <history-entry file="StorageFacadeTest - 2018.05.26 at 11h 14m 11s.xml">
+      <configuration name="StorageFacadeTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CarpoolTest_registerRide - 2018.05.14 at 08h 14m 07s.xml">
-      <configuration name="CarpoolTest.registerRide" configurationId="JUnit" />
+    <history-entry file="StorageFacadeTest - 2018.05.26 at 11h 14m 54s.xml">
+      <configuration name="StorageFacadeTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CarpoolTest_registerRide - 2018.05.14 at 08h 22m 55s.xml">
-      <configuration name="CarpoolTest.registerRide" configurationId="JUnit" />
+    <history-entry file="StorageFacadeTest - 2018.05.26 at 11h 15m 44s.xml">
+      <configuration name="StorageFacadeTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12249000" />
+    <option name="totallyTimeSpent" value="128712000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="34" width="1920" height="1046" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3265086" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" weight="0.20031796" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49926794" visible="true" weight="0.20031796" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23529412" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297414" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2273707" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.193265" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4938575" visible="true" weight="0.20833333" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.5061425" side_tool="true" weight="0.20574887" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39762932" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Learn" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4938575" visible="true" weight="0.2118003" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Structure" order="1" sideWeight="0.5061425" side_tool="true" weight="0.20574887" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.329429" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39762932" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297414" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3276923" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2273707" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Mongo Explorer" order="4" weight="0.2109375" />
+      <window_info id="Designer" order="2" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2273707" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3276923" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.329429" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3265086" />
+      <window_info anchor="right" id="Mongo Explorer" order="10" weight="0.2109375" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3297414" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4938575" visible="true" weight="0.2118003" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Structure" order="1" sideWeight="0.5061425" side_tool="true" weight="0.20574887" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39762932" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -437,356 +768,335 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Partly unit tests" />
-    <MESSAGE value="unit tests done, ready for integration" />
-    <MESSAGE value="Merge remote-tracking branch 'remotes/origin/master' into hitchhiker-side&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/uiDesigner.xml&#10;#&#9;Carpool.iml&#10;#&#9;bin/Main.class&#10;#&#9;src/Main.java" />
-    <MESSAGE value="removed class main" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed class main" />
+    <MESSAGE value="basic GUI with hooks for the database" />
+    <MESSAGE value="Gui progress and minor fixes" />
+    <MESSAGE value="class files cleanup" />
+    <MESSAGE value="Ride class changes" />
+    <MESSAGE value="Basic sign up form (person details) is done" />
+    <MESSAGE value="add ride in progress" />
+    <MESSAGE value="Added new classes to Storage package.&#10;Started implementing the StorageFacade.&#10;Added some exception classes." />
+    <MESSAGE value="Reconfigured some classes" />
+    <MESSAGE value="Finished implementing (I think so..).&#10;Need to add unit tests." />
+    <MESSAGE value="backend integration with frontend maybe done" />
+    <MESSAGE value="small fix - compilation error" />
+    <MESSAGE value="add ride scene changes" />
+    <MESSAGE value="bug fixes, commuter is no longer abstract" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixes, commuter is no longer abstract" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GUI/CarpoolController.java</url>
+          <line>170</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="53" />
     </breakpoint-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>currentUserDetail.getUserRole()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>x</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>connection.getConnectionStatus()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>credentials.getDbName()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>credentials.getDbName());
+    }</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Person.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="105">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Ride.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="234">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Car.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/UserToDocumentAdapter.java" />
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="435">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Main.java">
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/com/mongodb/client/model/InsertOneOptions.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/com/mongodb/assertions/Assertions.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/org/bson/codecs/configuration/CodecCache.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/com/mongodb/DBObjectCodecProvider.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/org/bson/codecs/configuration/ChildCodecRegistry.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/org/bson/codecs/BinaryCodec.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/org/bson/codecs/ValueCodecProvider.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/org/bson/codecs/BsonValueCodecProvider.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/org/bson/codecs/DocumentCodec.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/org/bson/codecs/DocumentCodecProvider.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/org/bson/codecs/configuration/ProvidersCodecRegistry.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/com/mongodb/MongoCollectionImpl.class" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/com/mongodb/DBRefCodecProvider.class" />
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/RideToDocumentAdapter.java" />
+    <entry file="jar://$USER_HOME$/Downloads/mongo-java-driver-3.6.3.jar!/com/mongodb/client/MongoCollection.class" />
+    <entry file="file://$PROJECT_DIR$/tests/Core/Storage/StorageFacadeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="29" selection-end-column="1" />
+        <state relative-caret-position="173">
+          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Carpool.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/ObjectToDocumentAdapter.java" />
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/DocumentNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="60">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Commuter.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/MongoConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="135">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Hitchhiker.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/CollectionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="315">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/NoCarAssignedException.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/CurrentUserDetails.java" />
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/Session.java" />
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/Hitchhiker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="150">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/NoRideDriverAssignedException.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/RideDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/NoSeatAvailableInRideException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Ride.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/RideTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        <state relative-caret-position="225">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/CarpoolTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="765">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Carpool.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/MainGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        <state relative-caret-position="1003">
+          <caret line="74" column="11" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/RideTest.java">
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jfxrt.jar!/javafx/stage/Stage.class" />
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        <state relative-caret-position="480">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CarpoolTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/CurrentUserDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" selection-start-line="41" selection-end-line="42" />
+        <state relative-caret-position="480">
+          <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Carpool.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/StorageFacade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        <state relative-caret-position="219">
+          <caret line="147" selection-start-line="147" selection-end-line="147" />
+          <folding>
+            <element signature="method#provideCredentials#0;class#StorageFacade#0" />
+            <element signature="method#openConnection#0;class#StorageFacade#0" />
+            <element signature="method#openConnection#1;class#StorageFacade#0" />
+            <element signature="method#registerNewUser#0;class#StorageFacade#0" />
+            <element signature="method#existsUser#0;class#StorageFacade#0" />
+            <element signature="method#loadAllUsers#0;class#StorageFacade#0" />
+            <element signature="method#loadAllUnexecutedRides#0;class#StorageFacade#0" />
+            <element signature="method#loadRideHistory#0;class#StorageFacade#0" />
+            <element signature="method#updateRideStatusToExecuted#0;class#StorageFacade#0" />
+            <element signature="method#updateRideDetails#0;class#StorageFacade#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/RideTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Carpool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CarpoolTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/RideTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Carpool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CarpoolTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Ride.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/RideTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Carpool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CarpoolTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Ride.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="63" column="26" lean-forward="true" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Ride.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1853">
-          <caret line="109" column="36" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/RideTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CarpoolTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/RideTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/RideDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Carpool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Commuter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Hitchhiker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/NoCarAssignedException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/Main.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/NoSeatAvailableInRideException.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/Carpool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="1230">
+          <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Person.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/RideStatusObservable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="102">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Ride.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/LoginScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="150">
+          <caret line="101" column="54" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/RideStatusObserver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="170">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Carpool.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hitchhiker/side/NoRideDriverAssignedException.java">
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/Commuter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="525">
+          <caret line="39" column="83" selection-start-line="39" selection-start-column="83" selection-end-line="39" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jfxrt.jar!/javafx/fxml/FXMLLoader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1236" selection-start-line="1236" selection-end-line="1236" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Storage/Adapters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/Ride.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/Logic/LogicFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/SignUpUserPassController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="62" column="119" selection-start-line="62" selection-start-column="119" selection-end-line="62" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/SignUpScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="93" column="45" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/SignUpCarDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="99" column="95" selection-start-line="99" selection-start-column="95" selection-end-line="99" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/RideDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/AddRideScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/CarpoolController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="167" column="5" lean-forward="true" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#signOut#0;class#CarpoolController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/RideDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="161" column="32" lean-forward="true" selection-start-line="161" selection-start-column="32" selection-end-line="161" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -847,7 +1157,18 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
